@@ -1,14 +1,25 @@
+"use client"; // Required for hooks in Next.js
+
+import { usePathname } from "next/navigation"; // Hook for getting the current path
+import Link from "next/link"; // Use Link for navigation
+import { useState } from "react"; // To manage hover state
+
 const Sidebar = () => {
+  const pathname = usePathname(); // Get the current path
+  const [hoveredTab, setHoveredTab] = useState(null); // Track hovered tab
+
+  const isActive = (path) => pathname === path;
+
   return (
     <div className="sidebar">
       <div className="sidebar-content">
         <div className="sidebar-header">
-          <a href="/about" className="sidebar-header-wrap w-inline-block">
+          <Link href="/about" className="sidebar-header-wrap w-inline-block">
             <div className="sidebar-header-avatar-wrap">
               <img
                 src="images/avatar-05.jpg"
                 loading="lazy"
-                alt=""
+                alt="Profile Avatar"
                 className="sidebar-header-avatar"
               />
               <div className="sidebar-header-avatar-outline"></div>
@@ -19,67 +30,59 @@ const Sidebar = () => {
                 <div>Full Stack Dev</div>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
+
         <div className="sidebar-navbar">
-          <div
-            data-w-id="37c44af6-4b5a-46b9-ff50-27f15031981f"
-            className="navbar-list"
-          >
-            <div style={{ opacity: 0 }} className="navbar-link-hover-bg"></div>
-            <a
-              data-w-id="37c44af6-4b5a-46b9-ff50-27f150319821"
+          <div className="navbar-list">
+            {/* Home Tab */}
+            <Link
               href="/"
-              aria-current="page"
-              className="navbar-link w-inline-block w--current"
+              className={`navbar-link w-inline-block ${
+                isActive("/") ? "w--current" : ""
+              }`}
+              onMouseEnter={() => setHoveredTab("/")}
+              onMouseLeave={() => setHoveredTab(null)}
             >
-              <div
-                style={{ opacity: 1 }}
-                className="navbar-link-active-bg"
-              ></div>
+              {isActive("/") && <div className="navbar-link-active-bg"></div>}
+              {hoveredTab === "/" && !isActive("/") && (
+                <div className="navbar-link-hover-bg"></div>
+              )}
               <div className="w-layout-grid navbar-link-content">
-                <div
-                  id="w-node-_37c44af6-4b5a-46b9-ff50-27f150319823-54234c9a"
-                  className="navbar-icon-wrap"
-                >
+                <div className="navbar-icon-wrap">
                   <div className="navbar-active-icon w-embed">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="w-6 h-6"
+                      class="w-6 h-6"
                     >
                       <path
-                        fillRule="evenodd"
+                        fill-rule="evenodd"
                         d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="navbar-inactive-icon w-embed">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
-                        clipRule="evenodd"
+                        clip-rule="evenodd"
                       />
                     </svg>
                   </div>
                 </div>
                 <div>Home</div>
               </div>
-            </a>
+            </Link>
             <div className="navbar-list-divider"></div>
-            <a
-              data-w-id="37c44af6-4b5a-46b9-ff50-27f150319828"
+            <Link
               href="/projects"
-              className="navbar-link w-inline-block"
+              className={`navbar-link w-inline-block ${
+                isActive("/projects") ? "w--current" : ""
+              }`}
+              onMouseEnter={() => setHoveredTab("/projects")}
+              onMouseLeave={() => setHoveredTab(null)}
             >
+              {isActive("/projects") && (
+                <div className="navbar-link-active-bg"></div>
+              )}
+              {hoveredTab === "/projects" && !isActive("/projects") && (
+                <div className="navbar-link-hover-bg"></div>
+              )}
               <div className="w-layout-grid navbar-link-content">
                 <div className="navbar-icon-wrap">
                   <div className="navbar-active-icon w-embed">
@@ -111,55 +114,22 @@ const Sidebar = () => {
                 </div>
                 <div>Projects</div>
               </div>
-            </a>
+            </Link>
             <div className="navbar-list-divider"></div>
-            <a
-              data-w-id="37c44af6-4b5a-46b9-ff50-27f15031982e"
-              href="/shop"
-              className="navbar-link w-inline-block"
-            >
-              <div className="w-layout-grid navbar-link-content">
-                <div className="navbar-icon-wrap">
-                  <div className="navbar-active-icon w-embed">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="navbar-inactive-icon w-embed">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div>Shop</div>
-              </div>
-            </a>
-            <div className="navbar-list-divider"></div>
-            <a
-              data-w-id="37c44af6-4b5a-46b9-ff50-27f150319834"
+            <Link
               href="/notes"
-              className="navbar-link w-inline-block"
+              className={`navbar-link w-inline-block ${
+                isActive("/notes") ? "w--current" : ""
+              }`}
+              onMouseEnter={() => setHoveredTab("/notes")}
+              onMouseLeave={() => setHoveredTab(null)}
             >
+              {isActive("/notes") && (
+                <div className="navbar-link-active-bg"></div>
+              )}
+              {hoveredTab === "/notes" && !isActive("/notes") && (
+                <div className="navbar-link-hover-bg"></div>
+              )}
               <div className="w-layout-grid navbar-link-content">
                 <div className="navbar-icon-wrap">
                   <div className="navbar-active-icon w-embed">
@@ -191,7 +161,139 @@ const Sidebar = () => {
                 </div>
                 <div>Notes</div>
               </div>
-            </a>
+            </Link>
+
+            <div className="navbar-list-divider"></div>
+            <Link
+              href="/tools"
+              className={`navbar-link w-inline-block ${
+                isActive("/tools") ? "w--current" : ""
+              }`}
+              onMouseEnter={() => setHoveredTab("/tools")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              {isActive("/tools") && (
+                <div className="navbar-link-active-bg"></div>
+              )}
+              {hoveredTab === "/tools" && !isActive("/tools") && (
+                <div className="navbar-link-hover-bg"></div>
+              )}
+              <div className="w-layout-grid navbar-link-content">
+                <div className="navbar-icon-wrap">
+                  <div className="navbar-active-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
+                      <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
+                      <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+                    </svg>
+                  </div>
+                  <div className="navbar-inactive-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div>Tools</div>
+              </div>
+            </Link>
+
+            <div className="navbar-list-divider"></div>
+            {/* About Tab */}
+            <Link
+              href="/about"
+              className={`navbar-link w-inline-block ${
+                isActive("/about") ? "w--current" : ""
+              }`}
+              onMouseEnter={() => setHoveredTab("/about")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              {isActive("/about") && (
+                <div className="navbar-link-active-bg"></div>
+              )}
+              {hoveredTab === "/about" && !isActive("/about") && (
+                <div className="navbar-link-hover-bg"></div>
+              )}
+              <div className="w-layout-grid navbar-link-content">
+                <div className="navbar-icon-wrap">
+                  <div className="navbar-active-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path d="M12 2a10 10 0 110 20 10 10 0 010-20z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>About</div>
+              </div>
+            </Link>
+            <div className="navbar-list-divider"></div>
+            {/* Contact Tab */}
+            <Link
+              href="/contact"
+              className={`navbar-link w-inline-block ${
+                isActive("/contact") ? "w--current" : ""
+              }`}
+              onMouseEnter={() => setHoveredTab("/contact")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              {isActive("/contact") && (
+                <div className="navbar-link-active-bg"></div>
+              )}
+              {hoveredTab === "/contact" && !isActive("/contact") && (
+                <div className="navbar-link-hover-bg"></div>
+              )}
+              <div className="w-layout-grid navbar-link-content">
+                <div className="navbar-icon-wrap">
+                  <div className="navbar-active-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path d="M19.5 22.5a3 3 0 003-3v-8.174l-6.879 4.022 3.485 1.876a.75.75 0 01-.712 1.321l-5.683-3.06a1.5 1.5 0 00-1.422 0l-5.683 3.06a.75.75 0 01-.712-1.32l3.485-1.877L1.5 11.326V19.5a3 3 0 003 3h15z" />
+                      <path d="M1.5 9.589v-.745a3 3 0 011.578-2.641l7.5-4.039a3 3 0 012.844 0l7.5 4.039A3 3 0 0122.5 8.844v.745l-8.426 4.926-.652-.35a3 3 0 00-2.844 0l-.652.35L1.5 9.59z" />
+                    </svg>
+                  </div>
+                  <div className="navbar-inactive-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div>Contact</div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
