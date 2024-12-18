@@ -1,5 +1,9 @@
 const NotesPage = () => {
-  return <div>Notes!</div>;
+  return (
+    <main className="main">
+      <h1>notes</h1>
+    </main>
+  );
 };
 
 export default NotesPage;

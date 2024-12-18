@@ -1,0 +1,384 @@
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import Footer from "@/components/footer/Footer";
+export const metadata = {
+title: "Djaouad' Home",
+description: "Next.js starter app",
+};
+export default function Home() {
+return (
+<>
+    <main className="main">
+        <div className="container">
+            <div>
+                <div className="container-small align-left">
+                    <div className="hero-block">
+                        <h1 className="hero-heading">
+                            Full Stack Developper &amp; Creative Strategist open to
+                            freelance worldwide.
+                        </h1>
+                        <div className="text-lead">
+                            founder of j4 labs. Based in ALGERIA.
+                        </div>
+                    </div>
+                </div>
+                <div className="block-divider"></div>
+            </div>
+
+            <div className="section-block">
+                <div className="content-title-wrap">
+                    <div className="content-title-dot"></div>
+                    <h2 className="content-title">Projects.</h2>
+                </div>
+                <div className="w-dyn-list">
+                    <div role="list" className="w-dyn-items">
+                        <div role="listitem" className="w-dyn-item">
+                            <Link href="/project/stord" className="card w-inline-block">
+                            <div className="shine-wrap">
+                                <div className="shine"></div>
+                            </div>
+                            <div className="card-content-vertical">
+                                <div className="card-meta">
+                                    <div className="card-info">
+                                        <div className="card-tag">Design</div>
+                                    </div>
+                                    <div className="card-cta-wrap">
+                                        <div className="card-cta">
+                                            <div className="icon-svg w-embed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 className="card-heading">Stord</h2>
+                                    <div className="card-heading is-text">
+                                        Dark Mode Portfolio Webflow Template
+                                    </div>
+                                </div>
+                                <div className="w-layout-grid thumb-3x-column">
+                                    <div className="card-thumb-static-wrap">
+                                        <div className="card-thumb">
+                                            <Image src="/images/gallery-image-02.jpg" alt="" loading="lazy" width={500}
+                                                // Add the width property height={300} // Add the height property
+                                                sizes="(max-width: 479px) 86vw, (max-width: 767px) 91vw, (max-width: 991px) 89vw, 59vw"
+                                                srcSet="/images/gallery-image-02-p-500.jpg 500w, /images/gallery-image-02-p-800.jpg 800w, /images/gallery-image-02-p-1080.jpg 1080w, /images/gallery-image-02.jpg 1440w"
+                                                className="thumb-image" />
+                                        </div>
+                                    </div>
+                                    <div className="card-thumb-static-wrap hide-portrait">
+                                        <div className="card-thumb">
+                                            <Image src="/images/gallery-image-03.jpg" alt="" loading="lazy" width={500}
+                                                // Add the width property height={300} // Add the height property
+                                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 89vw, 59vw"
+                                                srcSet="/images/gallery-image-03-p-500.jpg 500w, /images/gallery-image-03-p-800.jpg 800w, /images/gallery-image-03-p-1080.jpg 1080w, /images/gallery-image-03.jpg 1440w"
+                                                className="thumb-image" />
+                                        </div>
+                                    </div>
+                                    <div className="card-thumb-static-wrap hide-portrait">
+                                        <div className="card-thumb">
+                                            <Image src="/images/gallery-image-04.jpg" alt="" loading="lazy" width={500}
+                                                // Add the width property height={300} // Add the height property
+                                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 89vw, 59vw"
+                                                srcSet="/images/gallery-image-04-p-500.jpg 500w, /images/gallery-image-04-p-800.jpg 800w, /images/gallery-image-04-p-1080.jpg 1080w, /images/gallery-image-04.jpg 1440w"
+                                                className="thumb-image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="block-divider"></div>
+            <div className="section-block">
+                <div className="content-title-wrap">
+                    <div className="content-title-dot"></div>
+                    <h2 className="content-title">Notes.</h2>
+                    <div className="content-title is-text">
+                        Aenean faucibus nibh et justo cursus id rutrum.
+                    </div>
+                </div>
+                <div className="w-dyn-list">
+                    <div role="list" className="_2x-column w-dyn-items">
+                        <div role="listitem" className="cms-item w-dyn-item">
+                            <a href="/post/7-ways-to-improve-website-usability-and-accessibility"
+                                className="card w-inline-block">
+                                <div className="shine-wrap">
+                                    <div className="shine"></div>
+                                </div>
+                                <div className="card-content-vertical">
+                                    <div>
+                                        <h2 className="card-heading">
+                                            7 Ways To Improve Website Usability And Accessibility
+                                        </h2>
+                                    </div>
+                                    <div className="card-meta">
+                                        <div className="card-info">
+                                            <div>May 4, 2023</div>
+                                            <div>•</div>
+                                            <div>5</div>
+                                            <div>min read</div>
+                                        </div>
+                                        <div className="card-cta-wrap">
+                                            <div className="card-badge">Featured</div>
+                                            <div className="card-cta">
+                                                <div className="icon-svg w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div role="listitem" className="cms-item w-dyn-item">
+                            <a href="/post/7-must-have-tools-for-web-designers" className="card w-inline-block">
+                                <div className="shine-wrap">
+                                    <div className="shine"></div>
+                                </div>
+                                <div className="card-content-vertical">
+                                    <div>
+                                        <h2 className="card-heading">
+                                            7 Must Have Tools For Web Designers
+                                        </h2>
+                                    </div>
+                                    <div className="card-meta">
+                                        <div className="card-info">
+                                            <div>May 4, 2023</div>
+                                            <div>•</div>
+                                            <div>10</div>
+                                            <div>min read</div>
+                                        </div>
+                                        <div className="card-cta-wrap">
+                                            <div className="card-badge w-condition-invisible w-dyn-bind-empty"></div>
+                                            <div className="card-cta">
+                                                <div className="icon-svg w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div role="listitem" className="cms-item w-dyn-item">
+                            <a href="/post/how-marketing-teams-can-accelerate-speed-to-market"
+                                className="card w-inline-block">
+                                <div className="shine-wrap">
+                                    <div className="shine"></div>
+                                </div>
+                                <div className="card-content-vertical">
+                                    <div>
+                                        <h2 className="card-heading">
+                                            How marketing teams can accelerate speed to market
+                                        </h2>
+                                    </div>
+                                    <div className="card-meta">
+                                        <div className="card-info">
+                                            <div>May 4, 2023</div>
+                                            <div>•</div>
+                                            <div>8</div>
+                                            <div>min read</div>
+                                        </div>
+                                        <div className="card-cta-wrap">
+                                            <div className="card-badge">Featured</div>
+                                            <div className="card-cta">
+                                                <div className="icon-svg w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div role="listitem" className="cms-item w-dyn-item">
+                            <a href="/post/14-common-misconceptions-about-web-design" className="card w-inline-block">
+                                <div className="shine-wrap">
+                                    <div className="shine"></div>
+                                </div>
+                                <div className="card-content-vertical">
+                                    <div>
+                                        <h2 className="card-heading">
+                                            14 Common Misconceptions About Web Design
+                                        </h2>
+                                    </div>
+                                    <div className="card-meta">
+                                        <div className="card-info">
+                                            <div>May 4, 2023</div>
+                                            <div>•</div>
+                                            <div>8</div>
+                                            <div>min read</div>
+                                        </div>
+                                        <div className="card-cta-wrap">
+                                            <div className="card-badge w-condition-invisible w-dyn-bind-empty"></div>
+                                            <div className="card-cta">
+                                                <div className="icon-svg w-embed">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="block-divider"></div>
+            <div className="section-block">
+                <div className="content-title-wrap">
+                    <div className="content-title-dot"></div>
+                    <h2 className="content-title">Tools.</h2>
+                    <div className="content-title is-text">
+                        Aenean faucibus nibh et justo cursus id rutrum.
+                    </div>
+                </div>
+                <div className="w-layout-grid _2x-column">
+                    <a href="https://www.webflow.com" target="_blank" className="card w-inline-block"
+                        rel="noopener noreferrer">
+                        <div className="shine-wrap">
+                            <div className="shine"></div>
+                        </div>
+                        <div className="card-content-vertical">
+                            <div className="tools-head-long">
+                                <div className="app-wrap">
+                                    <img src="images/webflow-icon.png" loading="lazy" alt=""
+                                        className="sidebar-header-avatar" />
+                                    <div className="app-outline"></div>
+                                </div>
+                                <div className="card-cta-wrap">
+                                    <div className="card-badge is-orange">Favorite</div>
+                                    <div className="card-cta">
+                                        <div className="icon-svg w-embed">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                strokeWidth="1.5" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round"
+                                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 className="card-heading">Webflow</h2>
+                                <div>
+                                    A user-friendly and intuitive website builder that makes
+                                    creating pages easy even for...
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div className="_1x-column">
+                        <a href="https://www.framer.com/" target="_blank" className="card w-inline-block"
+                            rel="noopener noreferrer">
+                            <div className="shine-wrap">
+                                <div className="shine"></div>
+                            </div>
+                            <div className="card-content-vertical">
+                                <div className="tools">
+                                    <div className="tools-head">
+                                        <div className="tools-icon">
+                                            <img src="images/icon-loom.webp" loading="lazy" sizes="40px"
+                                                srcSet="images/icon-loom-p-500.webp 500w, images/icon-loom-1.webp 512w"
+                                                alt="" className="image-background" />
+                                            <div className="app-outline"></div>
+                                        </div>
+                                        <div>
+                                            <h2 className="card-heading">Framer</h2>
+                                        </div>
+                                    </div>
+                                    <div className="card-text-2-lines">
+                                        Webflow is a user-friendly and intuitive website builder
+                                        that makes creating pages easy even for those who don’t
+                                        write code. Forget about developers and let your
+                                        creativity flow.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.readymag.com" target="_blank" className="card w-inline-block"
+                            rel="noopener noreferrer">
+                            <div className="shine-wrap">
+                                <div className="shine"></div>
+                            </div>
+                            <div className="card-content-vertical">
+                                <div className="tools">
+                                    <div className="tools-head">
+                                        <div className="tools-icon">
+                                            <img src="images/icon-rm.png" loading="lazy" alt=""
+                                                className="image-background" />
+                                            <div className="app-outline"></div>
+                                        </div>
+                                        <div>
+                                            <h2 className="card-heading">Readymag</h2>
+                                        </div>
+                                    </div>
+                                    <div className="card-text-2-lines">
+                                        Readymag is a web-based tool that allows you to design
+                                        digital publications, websites, presentations, and more
+                                        in a simple way. It lets you give your project a
+                                        professional and creative look.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.loom.com/" target="_blank" className="card w-inline-block"
+                            rel="noopener noreferrer">
+                            <div className="shine-wrap">
+                                <div className="shine"></div>
+                            </div>
+                            <div className="card-content-vertical">
+                                <div className="tools">
+                                    <div className="tools-head">
+                                        <div className="tools-icon">
+                                            <img src="images/icon-loom.webp" loading="lazy" sizes="40px"
+                                                srcSet="images/icon-loom-p-500.webp 500w, images/icon-loom-1.webp 512w"
+                                                alt="" className="image-background" />
+                                            <div className="app-outline"></div>
+                                        </div>
+                                        <div>
+                                            <h2 className="card-heading">Loom</h2>
+                                        </div>
+                                    </div>
+                                    <div className="card-text-2-lines">
+                                        Webflow is a user-friendly and intuitive website builder
+                                        that makes creating pages easy even for those who don’t
+                                        write code. Forget about developers and let your
+                                        creativity flow.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Footer />
+    </main>
+</>
+);
+}

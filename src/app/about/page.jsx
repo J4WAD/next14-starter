@@ -1,5 +1,9 @@
 const AboutPage = () => {
-  return <div>About!</div>;
+  return (
+    <main className="main">
+      <h1>about</h1>
+    </main>
+  );
 };
 
 export default AboutPage;

@@ -1,5 +1,9 @@
 const ProjectsPage = () => {
-  return <div>ProjectsPage!</div>;
+  return (
+    <main className="main">
+      <h1>projects</h1>
+    </main>
+  );
 };
 
 export default ProjectsPage;
