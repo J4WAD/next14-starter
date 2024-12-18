@@ -240,7 +240,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
+            <div className="block-divider"></div>
             <div className="content-title-wrap">
               <div className="content-title-dot"></div>
               <h2 className="content-title">Notes.</h2>
@@ -259,7 +259,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
+            <div className="block-divider"></div>
             <div className="content-title-wrap">
               <div className="content-title-dot"></div>
               <h2 className="content-title">Tools.</h2>
@@ -328,7 +328,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="block-divider"></div>
         </div>
         <Footer />
       </main>

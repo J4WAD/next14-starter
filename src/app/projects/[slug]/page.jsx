@@ -2,30 +2,21 @@
 
 import { useState } from "react";
 import Footer from "@/components/footer/Footer";
-
-const ProjectsPage = () => {
-  const [style, setStyle] = useState({});
+const SingleProjecPage = () => {
+  const [shineStyle, setShineStyle] = useState({});
   const [activeCard, setActiveCard] = useState(null);
 
   const handleMouseMove = (e, cardId) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left; // X position within the card
-    const y = e.clientY - rect.top; // Y position within the card
-    const centerX = rect.width / 2; // Center X of the card
-    const centerY = rect.height / 2; // Center Y of the card
-    const rotateX = ((y - centerY) / centerY) * -2; // Subtle rotation for Y
-    const rotateY = ((x - centerX) / centerX) * 2; // Subtle rotation for X
-
-    setStyle({
-      transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-    });
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setShineStyle({ top: `${y}px`, left: `${x}px` });
     setActiveCard(cardId);
   };
 
   const handleMouseLeave = () => {
     setActiveCard(null);
-    setStyle({ transform: "perspective(1000px) rotateX(0deg) rotateY(0deg)" });
   };
 
   return (
@@ -61,12 +52,11 @@ const ProjectsPage = () => {
                   className="work-thumb w-dyn-item"
                   onMouseMove={(e) => handleMouseMove(e, "stord")}
                   onMouseLeave={handleMouseLeave}
-                  style={activeCard === "stord" ? style : {}}
                 >
                   <a href="/project/stord" className="card w-inline-block">
                     <div className="shine-wrap">
                       {activeCard === "stord" && (
-                        <div className="shine" style={style}></div>
+                        <div className="shine" style={shineStyle}></div>
                       )}
                     </div>
                     <div className="project-thumb-portrait">
@@ -87,12 +77,11 @@ const ProjectsPage = () => {
                   className="work-thumb w-dyn-item"
                   onMouseMove={(e) => handleMouseMove(e, "bergen")}
                   onMouseLeave={handleMouseLeave}
-                  style={activeCard === "bergen" ? style : {}}
                 >
                   <a href="/project/bergen" className="card w-inline-block">
                     <div className="shine-wrap">
                       {activeCard === "bergen" && (
-                        <div className="shine" style={style}></div>
+                        <div className="shine" style={shineStyle}></div>
                       )}
                     </div>
                     <div className="project-thumb-portrait">
@@ -118,4 +107,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default SingleProjectPage;

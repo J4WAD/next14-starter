@@ -2458,6 +2458,23 @@ blockquote {
     top: 0
 }
 
+
+
+@keyframes jump-scale {
+    0% {
+        transform: scale(1.005);
+        /* Initial size */
+    }
+
+    50% {
+        transform: scale(1.005);
+        /* Slight overscale for the jump */
+    }
+
+
+}
+
+
 .sidebar-controls {
     border-top: 1px solid var(--border);
     padding: 1.63rem;
@@ -3932,7 +3949,7 @@ blockquote {
 .shine {
     width: 640px;
     height: 640px;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.725), rgba(255, 255, 255, 0) 40%);
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgba(255, 255, 255, 0) 40%);
     position: absolute;
     top: 0%;
     bottom: 0%;
