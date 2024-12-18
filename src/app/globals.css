@@ -2230,6 +2230,7 @@ textarea.w-select {
     --text-muted: #666;
     --input-hover: #232323;
     --card-bg: #2e2e2e;
+    --card-hov: #414141;
     --input: #1c1c1c;
     --border-hover: rgba(255, 255, 255, .16);
     --orange: orange;
@@ -2459,7 +2460,8 @@ blockquote {
 
 .sidebar-controls {
     border-top: 1px solid var(--border);
-    padding: 1.25rem
+    padding: 1.63rem;
+
 }
 
 .sidebar-header {
@@ -2740,7 +2742,7 @@ blockquote {
 
 .card {
     width: 100%;
-    background-color: var(--card-bg);
+
     box-shadow: 0 2px 2px -1.5px var(--backgrop);
     color: var(--text-muted);
     border-radius: 12px;
@@ -3629,10 +3631,14 @@ blockquote {
     justify-content: space-between;
     padding: 15px;
     display: flex;
-    position: relative
+    position: relative;
+    transition: background-color 0.5s ease;
+    /* Smooth transition for background-color */
 }
 
-
+.card-content-vertical:hover {
+    background-color: var(--input-hover);
+}
 
 .team-wrap {
     margin-top: 8px
@@ -3926,7 +3932,7 @@ blockquote {
 .shine {
     width: 640px;
     height: 640px;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, .4), rgba(255, 255, 255, 0) 40%);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.725), rgba(255, 255, 255, 0) 40%);
     position: absolute;
     top: 0%;
     bottom: 0%;
