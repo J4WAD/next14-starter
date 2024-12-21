@@ -230,7 +230,7 @@ export default function Home() {
                               }`}
                             >
                               <div className="card-thumb">
-                                <Image
+                                <img
                                   src={image}
                                   alt=""
                                   loading="lazy"
@@ -294,7 +294,7 @@ export default function Home() {
                   <div className="card-content-vertical">
                     <div className="tools-head-long">
                       <div className="app-wrap">
-                        <Image
+                        <img
                           src={tool.icon}
                           loading="lazy"
                           alt=""

@@ -344,7 +344,7 @@ const ContactPage = () => {
                     id="w-node-_022b3e29-975d-00d0-46f4-1a691728e27c-a30fcb40"
                     className="contact-card-square"
                   >
-                    <Image
+                    <img
                       src="images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1--1.jpg"
                       loading="lazy"
                       sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, (max-width: 991px) 44vw, 30vw"
