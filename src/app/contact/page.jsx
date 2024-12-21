@@ -1,7 +1,7 @@
 "use client";
 import Footer from "@/components/footer/Footer";
 import { useState } from "react";
-
+import Image from "next/image";
 const ContactPage = () => {
   // 1. Store the styles for the shine and the currently active card
   const [shineStyle, setShineStyle] = useState({});
@@ -70,7 +70,7 @@ const ContactPage = () => {
                 )}
               </div>
               <div className="card-content-vertical">
-                <img
+                <image
                   src="../../images/bildschirmfoto-202023-03-17-20um-2009.43.01.png"
                   loading="lazy"
                   style={{ opacity: 0.5 }}
@@ -344,7 +344,7 @@ const ContactPage = () => {
                     id="w-node-_022b3e29-975d-00d0-46f4-1a691728e27c-a30fcb40"
                     className="contact-card-square"
                   >
-                    <img
+                    <Image
                       src="images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1--1.jpg"
                       loading="lazy"
                       sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, (max-width: 991px) 44vw, 30vw"

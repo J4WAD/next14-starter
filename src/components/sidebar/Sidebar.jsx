@@ -1,4 +1,5 @@
 "use client"; // Required for hooks in Next.js
+import Image from "next/image";
 
 import { usePathname } from "next/navigation"; // Hook for getting the current path
 import Link from "next/link"; // Use Link for navigation
@@ -16,9 +17,11 @@ const Sidebar = () => {
         <div className="sidebar-header">
           <Link href="/about" className="sidebar-header-wrap w-inline-block">
             <div className="sidebar-header-avatar-wrap">
-              <img
-                src="images/avatar-05.jpg"
+              <Image
+                src="/images/avatar-05.jpg"
                 loading="lazy"
+                height="92"
+                width="92"
                 alt="Profile Avatar"
                 className="sidebar-header-avatar"
               />

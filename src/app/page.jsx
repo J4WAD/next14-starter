@@ -119,6 +119,8 @@ export default function Home() {
       description:
         "A user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
       badge: "Favorite",
+      width: 40,
+      height: 40,
     },
     {
       href: "https://www.framer.com/",
@@ -126,6 +128,8 @@ export default function Home() {
       title: "Framer",
       description:
         "Webflow is a user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
+      width: 40,
+      height: 40,
     },
     {
       href: "https://www.readymag.com",
@@ -133,6 +137,8 @@ export default function Home() {
       title: "Readymag",
       description:
         "Readymag is a web-based tool that allows you to design digital publications, websites, presentations, and more.",
+      width: 40,
+      height: 40,
     },
     {
       href: "https://www.loom.com/",
@@ -140,6 +146,8 @@ export default function Home() {
       title: "Loom",
       description:
         "Loom is a platform to capture video and screen recordings to communicate with your team or clients quickly.",
+      width: 40,
+      height: 40,
     },
   ];
 
@@ -286,7 +294,7 @@ export default function Home() {
                   <div className="card-content-vertical">
                     <div className="tools-head-long">
                       <div className="app-wrap">
-                        <img
+                        <Image
                           src={tool.icon}
                           loading="lazy"
                           alt=""

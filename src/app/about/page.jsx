@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 
 const AboutPage = () => {
@@ -22,7 +22,7 @@ const AboutPage = () => {
             </div>
             <div className="content-block">
               <div>
-                I'm an Art Director &amp; Designer however venture pursuit he am
+                Im an Art Director &amp; Designer however venture pursuit he am
                 mr cordial. Forming musical am hearing studied be luckily.
                 Ourselves for determine attending how led gentleman sincerity.
                 Valley afford uneasy joy she thrown though bed set. In me

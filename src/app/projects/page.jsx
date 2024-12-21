@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import Footer from "@/components/footer/Footer";
 
@@ -72,7 +72,7 @@ const ProjectsPage = () => {
                       )}
                     </div>
                     <div className="project-thumb-portrait">
-                      <img
+                      <Image
                         loading="lazy"
                         alt=""
                         src="images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1-.jpg"
@@ -98,7 +98,7 @@ const ProjectsPage = () => {
                       )}
                     </div>
                     <div className="project-thumb-portrait">
-                      <img
+                      <Image
                         loading="lazy"
                         alt=""
                         src="images/room-xnpmvekj6pe-unsplash-20-1-201-20-2-20-1-.jpg"
