@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Footer from "@/components/footer/Footer";
 import Link from "next/link";
-import Image from "next/image";
 
 const Card = ({
   href,

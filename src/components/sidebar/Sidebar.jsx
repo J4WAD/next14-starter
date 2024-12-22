@@ -12,7 +12,10 @@ const Sidebar = () => {
   const pathname = usePathname(); // Get the current path
   const [hoveredTab, setHoveredTab] = useState(null); // Track hovered tab
 
-  const isActive = (path) => pathname === path;
+  const isActive = (path) => pathname === path; // Function to handle link click
+  const handleLinkClick = () => {
+    closeMenu(); // Close the sidebar menu
+  };
 
   return (
     <div className={`sidebar ${isMenuOpen ? "menu-open" : ""}`}>
@@ -49,6 +52,7 @@ const Sidebar = () => {
               }`}
               onMouseEnter={() => setHoveredTab("/")}
               onMouseLeave={() => setHoveredTab(null)}
+              onClick={handleLinkClick} // Close sidebar when link is clicked
             >
               {isActive("/") && <div className="navbar-link-active-bg"></div>}
               {hoveredTab === "/" && !isActive("/") && (
@@ -104,6 +108,7 @@ const Sidebar = () => {
               }`}
               onMouseEnter={() => setHoveredTab("/projects")}
               onMouseLeave={() => setHoveredTab(null)}
+              onClick={handleLinkClick} // Close sidebar when link is clicked
             >
               {isActive("/projects") && (
                 <div className="navbar-link-active-bg"></div>
@@ -155,6 +160,7 @@ const Sidebar = () => {
               }`}
               onMouseEnter={() => setHoveredTab("/notes")}
               onMouseLeave={() => setHoveredTab(null)}
+              onClick={handleLinkClick} // Close sidebar when link is clicked
             >
               {isActive("/notes") && (
                 <div className="navbar-link-active-bg"></div>
@@ -207,6 +213,7 @@ const Sidebar = () => {
               }`}
               onMouseEnter={() => setHoveredTab("/tools")}
               onMouseLeave={() => setHoveredTab(null)}
+              onClick={handleLinkClick} // Close sidebar when link is clicked
             >
               {isActive("/tools") && (
                 <div className="navbar-link-active-bg"></div>
@@ -262,6 +269,7 @@ const Sidebar = () => {
               }`}
               onMouseEnter={() => setHoveredTab("/about")}
               onMouseLeave={() => setHoveredTab(null)}
+              onClick={handleLinkClick} // Close sidebar when link is clicked
             >
               {isActive("/about") && (
                 <div className="navbar-link-active-bg"></div>
@@ -318,6 +326,7 @@ const Sidebar = () => {
               }`}
               onMouseEnter={() => setHoveredTab("/contact")}
               onMouseLeave={() => setHoveredTab(null)}
+              onClick={handleLinkClick} // Close sidebar when link is clicked
             >
               {isActive("/contact") && (
                 <div className="navbar-link-active-bg"></div>
