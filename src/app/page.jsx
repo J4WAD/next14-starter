@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Footer from "@/components/footer/Footer";
 import Link from "next/link";
+import Head from "next/head";
 
 const Card = ({
   href,
@@ -152,6 +153,14 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Home | My Portfolio</title>
+        <meta
+          name="description"
+          content="Welcome to my portfolio. I'm a Full Stack Developer & Creative Strategist open to freelance worldwide."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <main className="main">
         <div className="container">
           <div>
