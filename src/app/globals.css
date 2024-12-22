@@ -4502,7 +4502,7 @@ blockquote {
     }
 
     .sidebar-bg-tablet {
-        z-index: 1;
+        z-index: -1100;
         width: 100vw;
         height: 100vh;
         background-color: var(--backgrop-dark);
@@ -4623,6 +4623,16 @@ blockquote {
         padding-bottom: 3rem;
         position: relative
     }
+
+    .menu-open .sidebar-content {
+        display: flex;
+        /* Or block, depending on the layout */
+    }
+
+    .menu-open .sidebar-bg-tablet {
+        display: block;
+    }
+
 
     .block-divider {
         margin-top: 40px;
@@ -4779,6 +4789,7 @@ blockquote {
     .footer-meta-dot {
         display: none
     }
+
 
     .thumb-3x-column,
     .map-links-grid,
