@@ -24,10 +24,10 @@ const Sidebar = () => {
           <Link href="/about" className="sidebar-header-wrap w-inline-block">
             <div className="sidebar-header-avatar-wrap">
               <Image
-                src="/images/avatar-05.jpg"
+                src="/images/pdp.png"
                 loading="lazy"
-                height="92"
-                width="92"
+                height="228"
+                width="228"
                 alt="Profile Avatar"
                 className="sidebar-header-avatar"
               />
