@@ -70,9 +70,11 @@ const ContactPage = () => {
                 )}
               </div>
               <div className="card-content-vertical">
-                <image
-                  src="../../images/bildschirmfoto-202023-03-17-20um-2009.43.01.png"
+                <Image
+                  src="/images/bildschirmfoto-202023-03-17-20um-2009.43.01.png"
                   loading="lazy"
+                  width="90"
+                  height="90"
                   style={{ opacity: 0.5 }}
                   sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 93vw, 64vw"
                   alt=""
@@ -84,8 +86,8 @@ const ContactPage = () => {
                   <div className="map-info-item">
                     <div className="w-layout-grid map-links-grid">
                       <div id="w-node-_093978ed-d865-aab7-a8b5-c090d453e27a-a30fcb40">
-                        <div className="map-info-heading">Brandon Brekstad</div>
-                        <div>113 Baker St, London W1U 6RS, UK</div>
+                        <div className="map-info-heading">Djaouad Azzouz</div>
+                        <div>75, Rue El Amel- Gasria, Sétif, DZ</div>
                       </div>
                       <div id="w-node-_2c986120-4a92-938d-1d24-6b52be79ada7-a30fcb40">
                         <a href="#" className="button-small is-map w-button">

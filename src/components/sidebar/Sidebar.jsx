@@ -388,9 +388,9 @@ const Sidebar = () => {
             <div className="sidebar-header-avatar-outline"></div>
           </div>
           <div className="sidebar-tablet-avatar-info">
-            <div className="sidebar-tablet-avatar-name">Brandon Askim</div>
+            <div className="sidebar-tablet-avatar-name">Djaouad Azzouz</div>
             <div className="sidebar-tablet-avatar-title">
-              <div>UX Designer</div>
+              <div>Full Stack Dev</div>
             </div>
           </div>
         </Link>

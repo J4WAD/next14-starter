@@ -2107,7 +2107,7 @@ textarea.w-select {
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:991px) {
     .w-nav[data-collapse=small] .w-nav-menu {
         display: none
     }
@@ -4595,7 +4595,7 @@ blockquote {
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:991px) {
     .sidebar-header {
         padding-top: 0%
     }
