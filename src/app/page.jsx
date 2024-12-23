@@ -162,7 +162,7 @@ export default function Home() {
                   freelance worldwide.
                 </h1>
                 <div className="text-lead">
-                  Founder of j4 labs. Based in ALGERIA.
+                  Founder of J4LABS. Based in ALGERIA.
                 </div>
               </div>
             </div>
