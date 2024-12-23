@@ -12,7 +12,6 @@
     "@netlify/plugin-nextjs": "^5.9.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "decap-cms": "^3.4.0",
     "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
     "jquery": "^3.7.1",
@@ -24,7 +23,10 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "autoprefixer": "^10.4.20",
+    "decap-cms": "^3.4.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "postcss": "^8.4.49",

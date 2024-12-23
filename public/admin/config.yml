@@ -1,30 +1,22 @@
-# public/admin/config.yml
-
 backend:
   name: github
-  repo: j4wad/next14-starter
-  branch: main
-  # Note: For GitHub, you usually also need a GitHub OAuth App
-  # or Netlify Identity to handle authentication.
-
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+  repo: j4wad/next14-starter # Replace with your GitHub username/repository
+  branch: main # Change if your default branch is not `main`
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "content/projects"
-    create: true
-    slug: "{{slug}}"
+  - name: "projects" # Name of the collection (should be unique)
+    label: "Projects" # Display name of the collection in the CMS
+    folder: "content/projects" # Folder where project markdown files are stored
+    create: true # Allow creating new projects
+    slug: "{{slug}}" # Slug format for filenames (e.g., project-name.md)
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - {
-          label: "Technologies",
-          name: "technologies",
-          widget: "list",
-          field: { label: "Technology", name: "tech", widget: "string" },
-        }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", required: true } # Title of the project
+      - { label: "Slug", name: "slug", widget: "string", required: true } # Slug (e.g., project-name)
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" } # Thumbnail image
+      - { label: "Description", name: "description", widget: "text" } # Short description
+      - label: "Technologies"
+        name: "technologies"
+        widget: "list"
+        fields:
+          - { label: "Technology", name: "tech", widget: "string" } # List of technologies used
+      - { label: "Body", name: "body", widget: "markdown" } # Project body in markdown format
