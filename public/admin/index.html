@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-    <!-- Include the script that enables Netlify Identity on this page. -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>Decap CMS Admin</title>
 </head>
 
 <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Load Decap CMS from a CDN or local file -->
+    <script src="https://unpkg.com/decap-cms@^2.0.0/dist/decap-cms.js"></script>
+
+    <!-- Initialize Decap CMS -->
     <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
+        CMS.init();
     </script>
 </body>
 

@@ -1,9 +1,14 @@
-backend:
-  name: git-gateway
-  branch: main
+# public/admin/config.yml
 
-media_folder: "public/images"
-public_folder: "/images"
+backend:
+  name: github
+  repo: j4wad/next14-starter
+  branch: main
+  # Note: For GitHub, you usually also need a GitHub OAuth App
+  # or Netlify Identity to handle authentication.
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "projects"
@@ -14,6 +19,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Technologies",
+          name: "technologies",
+          widget: "list",
+          field: { label: "Technology", name: "tech", widget: "string" },
+        }
       - { label: "Body", name: "body", widget: "markdown" }
