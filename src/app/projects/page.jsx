@@ -1,9 +1,9 @@
 // app/projects/page.jsx
 import { promises as fs } from "fs";
-import { Promise } from "es6-promise"; // Add this line
+
 import path from "path";
 import matter from "gray-matter";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../components/ProjectCard";
 
 async function getProjects() {
   const projectsDirectory = path.join(process.cwd(), "content/projects");

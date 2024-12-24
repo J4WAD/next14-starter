@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-
+import { Promise } from "es6-promise";
 export default function ProjectCard({ project }) {
   const [style, setStyle] = useState({});
   const [isHovered, setIsHovered] = useState(false);

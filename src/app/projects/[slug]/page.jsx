@@ -2,7 +2,7 @@
 import { getProject } from "@/lib/projects"; // Adjust the import path as necessary
 import Image from "next/image"; // Recommended for optimized images
 import Link from "next/link";
-
+import { Promise } from "es6-promise";
 export default async function ProjectPage({ params }) {
   const { slug } = params;
   const project = await getProject(slug);
