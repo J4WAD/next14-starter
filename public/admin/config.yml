@@ -1,41 +1,27 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-
-# These settings let you edit content locally without pushing to GitHub
-local_backend: true
-
-# Media settings
-media_folder: "public/images"
-public_folder: "/images"
-
+media_folder: public/img
+public_folder: img
 collections:
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          default: "",
-          required: true,
-        }
-      - {
-          label: "Thumbnail",
-          name: "thumbnail",
-          widget: "image",
-          required: false,
-          allow_multiple: false,
-        }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          required: true,
+          label: "Technologies",
+          name: "technologies",
+          widget: "list",
+          field: { label: "Technology", name: "tech", widget: "string" },
         }
       - {
           label: "Status",
@@ -44,71 +30,3 @@ collections:
           options: ["draft", "in-progress", "completed"],
           default: "draft",
         }
-      - {
-          label: "Technologies",
-          name: "technologies",
-          widget: "list",
-          required: true,
-          min: 1,
-          field: { label: "Technology", name: "tech", widget: "string" },
-        }
-      - {
-          label: "GitHub URL",
-          name: "github",
-          widget: "string",
-          required: false,
-          pattern:
-            [
-              "^https://github.com/.+/.+$",
-              "Must be a valid GitHub repository URL",
-            ],
-        }
-      - {
-          label: "Live URL",
-          name: "live",
-          widget: "string",
-          required: false,
-          pattern:
-            [
-              "^https?://.*",
-              "Must be a valid URL starting with http:// or https://",
-            ],
-        }
-      - {
-          label: "Featured",
-          name: "featured",
-          widget: "boolean",
-          default: false,
-          required: false,
-        }
-      - { label: "Content", name: "body", widget: "markdown", required: true }
-
-  - name: "notes"
-    label: "Notes"
-    folder: "content/notes"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          default: "",
-          required: true,
-        }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          required: true,
-        }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options: ["Development", "Design", "Tutorial", "Tips", "Other"],
-          required: true,
-        }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Content", name: "body", widget: "markdown", required: true }
