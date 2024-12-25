@@ -1,10 +1,12 @@
-// app/projects/[slug]/page.jsx
 import { getProject } from "@/lib/projects"; // Adjust the import path as necessary
 import Image from "next/image"; // Recommended for optimized images
 import Link from "next/link";
-import { Promise } from "es6-promise";
+
+// Ensure that 'core-js' Promise polyfill is removed, as it’s not needed if using the modern JavaScript environment.
 export default async function ProjectPage({ params }) {
-  const { slug } = params;
+  // Await the params before destructuring
+  const { slug } = await params; // Await params to resolve them first
+
   const project = await getProject(slug);
 
   if (!project) {
@@ -60,7 +62,7 @@ export default async function ProjectPage({ params }) {
               <Image
                 src={thumbnail}
                 alt={title}
-                layout="fill"
+                fill
                 objectFit="cover"
                 className="rounded-lg"
               />

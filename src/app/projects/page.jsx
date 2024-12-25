@@ -1,7 +1,7 @@
 // app/projects/page.jsx
-import { promises as fs } from "fs";
 
 import path from "path";
+import fs from "fs"; // fs is a Node.js module, used for file system operations
 import matter from "gray-matter";
 import ProjectCard from "../../components/ProjectCard";
 
@@ -9,19 +9,17 @@ async function getProjects() {
   const projectsDirectory = path.join(process.cwd(), "content/projects");
 
   try {
-    const fileNames = await fs.readdir(projectsDirectory);
-    const projects = await Promise.all(
-      fileNames.map(async (fileName) => {
-        const fullPath = path.join(projectsDirectory, fileName);
-        const fileContents = await fs.readFile(fullPath, "utf8");
-        const { data } = matter(fileContents);
+    const fileNames = fs.readdirSync(projectsDirectory); // Use sync version to avoid async/await in this context
+    const projects = fileNames.map((fileName) => {
+      const fullPath = path.join(projectsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+      const { data } = matter(fileContents);
 
-        return {
-          ...data,
-          slug: fileName.replace(/\.md$/, ""),
-        };
-      })
-    );
+      return {
+        ...data,
+        slug: fileName.replace(/\.md$/, ""),
+      };
+    });
 
     return projects;
   } catch (error) {
@@ -63,7 +61,6 @@ export default async function ProjectsPage() {
 
         {/* Section Block / Projects List */}
         <div className="section-block">
-          {/* Using Tailwind grid + the class from the original snippet if you want */}
           <div className="_2x-column w-dyn-items grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
