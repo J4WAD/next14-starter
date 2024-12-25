@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/sidebar/Sidebar";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -8,20 +9,36 @@ export const metadata = {
   description: "Portfolio",
   icons: {
     icon: "/favicon.ico",
-    // You can add more icon types if needed
-    // apple: "/apple-touch-icon.png",
   },
-  // You can add more metadata fields as needed
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-arp="">
+      <head>
+        <Script
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className={inter.className}>
         <div className="layout">
           <Sidebar />
           {children}
         </div>
+        <Script id="netlify-identity-widget-setup" strategy="afterInteractive">
+          {`
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
