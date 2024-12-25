@@ -1,22 +1,114 @@
 backend:
-  name: github
-  repo: j4wad/next14-starter # Replace with your GitHub username/repository
-  branch: main # Change if your default branch is not `main`
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# These settings let you edit content locally without pushing to GitHub
+local_backend: true
+
+# Media settings
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
-  - name: "projects" # Name of the collection (should be unique)
-    label: "Projects" # Display name of the collection in the CMS
-    folder: "content/projects" # Folder where project markdown files are stored
-    create: true # Allow creating new projects
-    slug: "{{slug}}" # Slug format for filenames (e.g., project-name.md)
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true } # Title of the project
-      - { label: "Slug", name: "slug", widget: "string", required: true } # Slug (e.g., project-name)
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" } # Thumbnail image
-      - { label: "Description", name: "description", widget: "text" } # Short description
-      - label: "Technologies"
-        name: "technologies"
-        widget: "list"
-        fields:
-          - { label: "Technology", name: "tech", widget: "string" } # List of technologies used
-      - { label: "Body", name: "body", widget: "markdown" } # Project body in markdown format
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          required: true,
+        }
+      - {
+          label: "Thumbnail",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        }
+      - {
+          label: "Status",
+          name: "status",
+          widget: "select",
+          options: ["draft", "in-progress", "completed"],
+          default: "draft",
+        }
+      - {
+          label: "Technologies",
+          name: "technologies",
+          widget: "list",
+          required: true,
+          min: 1,
+          field: { label: "Technology", name: "tech", widget: "string" },
+        }
+      - {
+          label: "GitHub URL",
+          name: "github",
+          widget: "string",
+          required: false,
+          pattern:
+            [
+              "^https://github.com/.+/.+$",
+              "Must be a valid GitHub repository URL",
+            ],
+        }
+      - {
+          label: "Live URL",
+          name: "live",
+          widget: "string",
+          required: false,
+          pattern:
+            [
+              "^https?://.*",
+              "Must be a valid URL starting with http:// or https://",
+            ],
+        }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - { label: "Content", name: "body", widget: "markdown", required: true }
+
+  - name: "notes"
+    label: "Notes"
+    folder: "content/notes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          required: true,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Development", "Design", "Tutorial", "Tips", "Other"],
+          required: true,
+        }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Content", name: "body", widget: "markdown", required: true }
