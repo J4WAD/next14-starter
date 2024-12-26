@@ -69,6 +69,7 @@ export default function ProjectCard({ project }) {
           </div>
           <p className="text-gray-600 line-clamp-2">{project.description}</p>
 
+          {/* Technologies */}
           {project.technologies && (
             <div className="card-meta mt-4 flex flex-wrap gap-2">
               {project.technologies.map((tech) => (

@@ -2,15 +2,13 @@ import { getProject } from "@/lib/projects"; // Adjust the import path as necess
 import Image from "next/image"; // Recommended for optimized images
 import Link from "next/link";
 
-// Ensure that 'core-js' Promise polyfill is removed, as it’s not needed if using the modern JavaScript environment.
 export default async function ProjectPage({ params }) {
   // Await the params before destructuring
-  const { slug } = await params; // Await params to resolve them first
+  const { slug } = await params;
 
   const project = await getProject(slug);
 
   if (!project) {
-    // If project is not found, render a custom 404 message
     return (
       <main className="main">
         <div className="container mx-auto px-4 py-8">
@@ -26,7 +24,18 @@ export default async function ProjectPage({ params }) {
     );
   }
 
-  const { title, description, thumbnail, technologies, content } = project;
+  const {
+    title,
+    description,
+    thumbnail,
+    technologies,
+    content,
+    gallery_images,
+    year,
+    team,
+    awards,
+    live_preview_link,
+  } = project;
 
   return (
     <main className="main">
@@ -58,7 +67,6 @@ export default async function ProjectPage({ params }) {
           {/* Thumbnail */}
           {thumbnail && (
             <div className="relative w-full h-64 mb-8">
-              {/* Using Next.js Image for optimization */}
               <Image
                 src={thumbnail}
                 alt={title}
@@ -69,17 +77,104 @@ export default async function ProjectPage({ params }) {
             </div>
           )}
 
-          {/* Technologies */}
-          {technologies && technologies.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-4">
-              {technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
-                >
-                  {tech}
-                </span>
-              ))}
+          {/* Year */}
+          {year && (
+            <div className="content-block mb-6">
+              <div className="w-layout-grid content-grid">
+                <div className="content-title-wrap">
+                  <div className="content-title-dot"></div>
+                  <h2 className="content-title">Year</h2>
+                </div>
+                <div>{year}</div>
+              </div>
+            </div>
+          )}
+
+          {/* Team */}
+          {team && (
+            <div className="content-block mb-6">
+              <div className="w-layout-grid content-grid">
+                <div className="content-title-wrap">
+                  <div className="content-title-dot"></div>
+                  <h2 className="content-title">Team</h2>
+                </div>
+                <div>{team}</div>
+              </div>
+            </div>
+          )}
+
+          {/* Awards */}
+          {awards && awards.length > 0 && (
+            <div className="content-block mb-6">
+              <div className="w-layout-grid content-grid">
+                <div className="content-title-wrap">
+                  <div className="content-title-dot"></div>
+                  <h2 className="content-title">Awards</h2>
+                </div>
+                <div className="awards-rte">
+                  {awards.map((award, index) => (
+                    <p key={index}>
+                      <a
+                        href={award.url}
+                        target="_blank"
+                        className="text-blue-500"
+                      >
+                        {award.name}
+                      </a>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Gallery */}
+          {gallery_images && gallery_images.length > 0 && (
+            <div className="content-block mb-6">
+              <div className="w-dyn-list">
+                <div className="w-dyn-items">
+                  {gallery_images.map((image, index) => (
+                    <div
+                      key={index}
+                      role="listitem"
+                      className="w-dyn-item w-dyn-repeater-item"
+                    >
+                      <div className="product-image-wrap">
+                        <Image
+                          src={image.src}
+                          alt={title}
+                          className="product-image"
+                          width={500}
+                          height={500}
+                          objectFit="cover"
+                        />
+                        <div className="product-image-outline"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Live Preview Link */}
+          {live_preview_link && (
+            <div className="content-block mb-6">
+              <div className="w-layout-grid content-grid">
+                <div className="content-title-wrap">
+                  <div className="content-title-dot"></div>
+                  <h2 className="content-title">Live Preview</h2>
+                </div>
+                <div>
+                  <a
+                    href={live_preview_link}
+                    target="_blank"
+                    className="button-rounded-small w-button"
+                  >
+                    Live Website
+                  </a>
+                </div>
+              </div>
             </div>
           )}
 

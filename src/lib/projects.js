@@ -1,4 +1,3 @@
-// lib/projects.js
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -19,6 +18,12 @@ export async function getProjects() {
     return {
       ...data,
       slug: fileName.replace(/\.md$/, ""),
+      // Ensure optional fields like gallery_images, year, team, etc. are added
+      gallery_images: data.gallery_images || [],
+      year: data.year || null,
+      team: data.team || null,
+      awards: data.awards || [],
+      live_preview_link: data.live_preview_link || null,
     };
   });
 
@@ -41,6 +46,11 @@ export async function getProject(slug) {
       ...data,
       slug,
       content,
+      gallery_images: data.gallery_images || [],
+      year: data.year || null,
+      team: data.team || null,
+      awards: data.awards || [],
+      live_preview_link: data.live_preview_link || null,
     };
   } catch (error) {
     console.error(`Error fetching project with slug "${slug}":`, error);
