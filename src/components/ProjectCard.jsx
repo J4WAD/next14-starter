@@ -61,27 +61,36 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* Info Section */}
-        <div className="project-thumb-portrait-info p-6 bg-white">
-          <div className="space-beetween flex justify-between items-center mb-2">
-            <h2 className="card-heading text-2xl font-semibold text-gray-800">
-              {project.title}
-            </h2>
+        <div className="project-thumb-portrait-info">
+          <div className="space-beetween">
+            <h2 className="card-heading">{project.title}</h2>
           </div>
-          <p className="text-gray-600 line-clamp-2">{project.description}</p>
+          <div className="card-meta">
+            <div className="card-info">
+              <div className="card-tag is-light">{project.category}</div>
+            </div>
+            <div className="card-cta-wrap">
+              <div className="card-cta">
+                <div className="icon-svg w-embed">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Technologies */}
-          {project.technologies && (
-            <div className="card-meta mt-4 flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="card-tag is-light px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
       </a>
     </div>

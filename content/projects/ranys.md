@@ -4,6 +4,7 @@ description: I developed this website for a clinic
 thumbnail: /images/shri-4tskjkuteoi-unsplash-201-20-1-p-800-1.jpg
 year: "2023"
 team: Djaouad
+category: Web Dev
 content: |-
   **Helllooooo**
 
