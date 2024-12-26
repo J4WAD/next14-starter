@@ -158,8 +158,8 @@ export default function Home() {
             <div className="container-small align-left">
               <div className="hero-block">
                 <h1 className="hero-heading">
-                  Full Stack Developer &amp; Creative Strategist open to
-                  freelance worldwide.
+                  Full Stack Developer and Creative Strategist open to freelance
+                  worldwide.
                 </h1>
                 <div className="text-lead">
                   Founder of J4LABS. Based in ALGERIA.

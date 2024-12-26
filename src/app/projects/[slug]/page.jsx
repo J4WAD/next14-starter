@@ -13,7 +13,7 @@ export default async function ProjectPage({ params }) {
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold">Project Not Found</h2>
           <p className="mt-4">
-            We couldn't find the project you were looking for.
+            We couldnt find the project you were looking for.
           </p>
           <Link href="/projects" className="text-blue-500 mt-4 inline-block">
             Back to Projects
@@ -46,7 +46,8 @@ export default async function ProjectPage({ params }) {
         {/* Hero Section */}
         <div className="container-small align-left">
           <div className="hero-block">
-            <h1 className="hero-heading">{title}</h1>
+            <h1 className="hero-heading">{title.replace(/'/g, "&apos;")}</h1>
+
             <div className="text-lead">{description}</div>
           </div>
         </div>
@@ -137,7 +138,7 @@ export default async function ProjectPage({ params }) {
                 <div role="listitem" className="w-dyn-item w-dyn-repeater-item">
                   <div className="product-image-wrap">
                     <Image
-                      src={gallery_image_1.src}
+                      src={gallery_image_1}
                       alt={`${title} gallery image 1`}
                       width={1440}
                       height={900}
@@ -152,7 +153,7 @@ export default async function ProjectPage({ params }) {
                 <div role="listitem" className="w-dyn-item w-dyn-repeater-item">
                   <div className="product-image-wrap">
                     <Image
-                      src={gallery_image_2.src}
+                      src={gallery_image_2}
                       alt={`${title} gallery image 2`}
                       width={1440}
                       height={900}
@@ -167,7 +168,7 @@ export default async function ProjectPage({ params }) {
                 <div role="listitem" className="w-dyn-item w-dyn-repeater-item">
                   <div className="product-image-wrap">
                     <Image
-                      src={gallery_image_3.src}
+                      src={gallery_image_3}
                       alt={`${title} gallery image 3`}
                       width={1440}
                       height={900}
