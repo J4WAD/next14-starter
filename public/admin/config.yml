@@ -22,17 +22,9 @@ collections:
           fields: [{ label: "Award", name: "award", widget: "string" }],
         }
       - { label: "Content", name: "content", widget: "markdown" }
-      - {
-          label: "Gallery Images",
-          name: "gallery_images",
-          widget: "list",
-          fields:
-            [
-              { label: "Image 1", name: "image_1", widget: "image" },
-              { label: "Image 2", name: "image_2", widget: "image" },
-              { label: "Image 3", name: "image_3", widget: "image" },
-            ],
-        }
+      - { label: "Gallery Image 1", name: "gallery_image_1", widget: "image" }
+      - { label: "Gallery Image 2", name: "gallery_image_2", widget: "image" }
+      - { label: "Gallery Image 3", name: "gallery_image_3", widget: "image" }
       - {
           label: "Live Preview Link",
           name: "live_preview_link",
