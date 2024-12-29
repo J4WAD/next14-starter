@@ -1,7 +1,7 @@
 ---
-title: Ranys
+title: PUBDEC
 description: I developed this website for a clinic
-thumbnail: /images/thumb/ranys.png
+thumbnail: /images/thumb/pubdec.png
 year: "2023"
 team: Djaouad
 category: Web Dev

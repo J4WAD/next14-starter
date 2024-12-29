@@ -98,7 +98,18 @@ export default function Home() {
 
   const projects = [
     {
-      href: "/project/stord",
+      href: "/projects/Ranys",
+      heading: "Ranys",
+      tag: "Web Dev",
+      description: "Dark Mode Portfolio Webflow Template",
+      images: [
+        "/images/gallery-image-02.jpg",
+        "/images/gallery-image-03.jpg",
+        "/images/gallery-image-04.jpg",
+      ],
+    },
+    {
+      href: "/projects/stord",
       heading: "Stord",
       tag: "Design",
       description: "Dark Mode Portfolio Webflow Template",
@@ -162,7 +173,7 @@ export default function Home() {
                   worldwide.
                 </h1>
                 <div className="text-lead">
-                  Founder of J4LABS. Based in ALGERIA.
+                  Co-Founder of SipherOne. Based in ALGERIA.
                 </div>
               </div>
             </div>
@@ -247,6 +258,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
             <div className="block-divider"></div>
             <div className="content-title-wrap">
               <div className="content-title-dot"></div>
