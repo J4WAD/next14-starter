@@ -1,10 +1,4 @@
 ---
-title: PUBDEC
-description: I developed this website for a clinic
-thumbnail: /images/thumb/pubdec.png
-year: "2023"
-team: Djaouad
-category: Web Dev
 longdescription: |-
   **Helllooooo**
 
@@ -13,9 +7,21 @@ longdescription: |-
   1. **qs**
   2. **sd**
   3. > **qWWwWw**
-gallery_image_1: /images/gallery-image-01-p-500-1.jpg
-gallery_image_2: /images/gallery-image-02-p-1080-1.jpg
-gallery_image_3: /images/gallery-image-02-p-500-2.jpg
+title: PUBDEC
+description: I developed this website for a clinic
+thumbnail: /images/thumb/pubdec.png
+year: "2023"
+category: Web Dev
+team: Djaouad
+content: |-
+  Created this
+
+  1. a
+  2. a
+  3. a
+gallery_image_1: images/pubdecgallery-05.png
+gallery_image_2: images/pubdecgallery-06.png
+gallery_image_3: images/pubdecgallery-07.png
 live_preview_link: https://www.ranysfertility.com
 image: images/logo.png
 ---
