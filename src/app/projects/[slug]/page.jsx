@@ -2,6 +2,7 @@ import { getProject } from "@/lib/projects";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer/Footer";
+import ReactMarkdown from "react-markdown";
 
 export default async function ProjectPage({ params }) {
   const { slug } = await params;
@@ -128,7 +129,7 @@ export default async function ProjectPage({ params }) {
 
           {/* Content */}
           <div className="content-block">
-            <div>{content}</div>
+            <ReactMarkdown>{content}</ReactMarkdown>
           </div>
 
           {/* Gallery */}
