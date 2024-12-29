@@ -27,9 +27,10 @@ export default async function ProjectPage({ params }) {
   const {
     title,
     description,
+    longdescription,
     category,
     thumbnail,
-    content,
+
     gallery_image_1,
     gallery_image_2,
     gallery_image_3,
@@ -129,7 +130,7 @@ export default async function ProjectPage({ params }) {
 
           {/* Content */}
           <div className="content-block">
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown>{longdescription}</ReactMarkdown>
           </div>
 
           {/* Gallery */}

@@ -5,7 +5,7 @@ thumbnail: /images/thumb/gosite.png
 year: "2023"
 team: Djaouad
 category: Web Dev
-content: |-
+longdescription: |-
   **Helllooooo**
 
   * **qsdqsdqsd**

@@ -12,6 +12,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Content", name: "content", widget: "markdown" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Year", name: "year", widget: "string" }
       - { label: "Category", name: "category", widget: "string" }
@@ -22,7 +23,7 @@ collections:
           widget: "list",
           fields: [{ label: "Award", name: "award", widget: "string" }],
         }
-      - { label: "Content", name: "content", widget: "markdown" }
+
       - { label: "Gallery Image 1", name: "gallery_image_1", widget: "image" }
       - { label: "Gallery Image 2", name: "gallery_image_2", widget: "image" }
       - { label: "Gallery Image 3", name: "gallery_image_3", widget: "image" }
