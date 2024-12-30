@@ -92,11 +92,11 @@ const ToolsPage = () => {
   const tools = [
     {
       href: "https://www.framer.com/",
-      heading: "Webflow",
+      heading: "next",
       description:
-        "Webflow is a user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
+        "next is a user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
       tags: ["Design", "No Code", "Website Builder"],
-      iconSrc: "images/webflow-icon.png",
+      iconSrc: "images/next-icon.png",
     },
     {
       href: "https://www.readymag.com/",

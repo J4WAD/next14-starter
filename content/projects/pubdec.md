@@ -11,6 +11,6 @@ team: Djaouad
 gallery_image_1: /images/pubdecgallery-05.png
 gallery_image_2: /images/pubdecgallery-06.png
 gallery_image_3: /images/pubdecgallery-07.png
-live_preview_link: https://www.ranysfertility.com
+live_preview_link: https://homepage-pubdec.netlify.app
 image: images/logo.png
 ---

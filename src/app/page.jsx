@@ -113,9 +113,9 @@ export default function Home() {
 
   const tools = [
     {
-      href: "https://www.webflow.com",
-      icon: "/images/webflow-icon.png",
-      title: "Webflow",
+      href: "https://www.next.com",
+      icon: "/images/next-icon.png",
+      title: "next",
       description:
         "A user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
       badge: "Favorite",
@@ -127,7 +127,7 @@ export default function Home() {
       icon: "/images/icon-loom.webp",
       title: "Framer",
       description:
-        "Webflow is a user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
+        "next is a user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
       width: 40,
       height: 40,
     },

@@ -16,6 +16,6 @@ longdescription: |-
 gallery_image_1: /images/metamig3.png
 gallery_image_2: /images/metamig.png
 gallery_image_3: /images/metamig2.png
-live_preview_link: https://www.groupeouennouri.com
+live_preview_link: https://metmig.netlify.app
 image: images/logo.png
 ---
