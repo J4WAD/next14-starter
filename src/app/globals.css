@@ -3323,6 +3323,15 @@ blockquote {
     padding-right: 24px
 }
 
+.container-404 {
+    width: 100vw;
+    height: 100vh;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
 .post-body {
     width: 100%;
     border: 1.5px solid var(--border);
