@@ -19,9 +19,8 @@ content: |-
   1. a
   2. a
   3. a
-gallery_image_1: /images/pubdecgallery-05.png
-gallery_image_2: /images/pubdecgallery-06.png
-gallery_image_3: /images/pubdecgallery-07.png
+gallery_image_1: /images/energia1.png
+gallery_image_2: /images/energia2.png
 live_preview_link: https://www.ranysfertility.com
 image: images/logo.png
 ---
