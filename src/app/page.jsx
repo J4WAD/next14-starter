@@ -98,25 +98,15 @@ export default function Home() {
 
   const projects = [
     {
-      href: "/projects/Ranys",
-      heading: "Ranys",
+      href: "/projects/pubdec",
+      heading: "PUBDEC",
       tag: "Web Dev",
-      description: "Dark Mode Portfolio Webflow Template",
+      description:
+        "Dark, Glassmorphisme, Gradient, Minimalistic Website for PUBDEC ",
       images: [
-        "/images/gallery-image-02.jpg",
-        "/images/gallery-image-03.jpg",
-        "/images/gallery-image-04.jpg",
-      ],
-    },
-    {
-      href: "/projects/stord",
-      heading: "Stord",
-      tag: "Design",
-      description: "Dark Mode Portfolio Webflow Template",
-      images: [
-        "/images/gallery-image-02.jpg",
-        "/images/gallery-image-03.jpg",
-        "/images/gallery-image-04.jpg",
+        "/images/pubdecgallery-05.png",
+        "/images/pubdecgallery-06.png",
+        "/images/pubdecgallery-07.png",
       ],
     },
   ];
