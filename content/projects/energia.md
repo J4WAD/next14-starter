@@ -7,9 +7,9 @@ longdescription: |-
   1. **qs**
   2. **sd**
   3. > **qWWwWw**
-title: PUBDEC
+title: Energia
 description: I developed this website for a clinic
-thumbnail: /images/thumb/pubdec.png
+thumbnail: /images/thumb/energia.png
 year: "2023"
 category: Web Dev
 team: Djaouad
