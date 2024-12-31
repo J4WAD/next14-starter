@@ -1,6 +1,6 @@
 ---
 title: Groupe Ouennouri
-description: I developed this website for a clinic
+description: This website provides **Groupe Ouennouri** with a robust, user-friendly platform to showcase their services, team, and projects. The custom design, interactive elements, and flexible CMS integration will allow PUBDEC to manage and update their content effortlessly, ensuring that their website remains current and engaging for their audience.
 thumbnail: /images/thumb/gosite.png
 year: "2024"
 team: Djaouad

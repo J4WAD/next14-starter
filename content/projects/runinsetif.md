@@ -1,6 +1,6 @@
 ---
 title: RUN IN SETIF
-description: I developed this website for a clinic
+description:
 thumbnail: /images/thumb/run.png
 year: "2024"
 team: Djaouad

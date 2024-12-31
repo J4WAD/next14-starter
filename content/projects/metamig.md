@@ -1,6 +1,6 @@
 ---
 title: Metamig
-description: I developed this website for a clinic
+description: This website provides **Metamig** with a robust, user-friendly platform to showcase their products. The custom design, interactive elements, and flexible CMS integration will allow Metamig to manage and update their content effortlessly, ensuring that their website remains current and engaging for their audience.
 thumbnail: /images/thumb/metamig.png
 year: "2024"
 team: Djaouad

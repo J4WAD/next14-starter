@@ -2,7 +2,7 @@
 longdescription: |-
 
 title: Energia
-description: I developed this website for a clinic
+description:
 thumbnail: /images/thumb/energia.png
 year: "2024"
 category: Web Dev

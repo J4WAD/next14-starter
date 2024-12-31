@@ -1,6 +1,6 @@
 ---
 title: Recovery Plus
-description: I developed this website for a clinic
+description:
 thumbnail: /images/thumb/recovery.png
 year: "2024"
 team: Djaouad
