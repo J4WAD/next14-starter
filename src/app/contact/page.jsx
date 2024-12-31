@@ -374,26 +374,32 @@ const ContactPage = () => {
             <form
               id="send-a-message"
               name="email-form"
-              data-name="Email Form"
-              method="get"
-              data-wf-page-id="641340483d66b769a30fcb40"
-              data-wf-element-id="dded5a54-873d-d79f-ebda-88c1618dbf95"
+              method="POST"
+              action="/thank-you" // Replace with your thank-you page route
+              data-netlify="true"
+              netlify-honeypot="bot-field" // For spam prevention
             >
+              <input type="hidden" name="form-name" value="email-form" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you're human:
+                  <input name="bot-field" />
+                </label>
+              </p>
               <div className="w-layout-grid _4x-column">
                 <input
-                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf98-a30fcb40 w-input"
+                  className="text-field w-input"
                   maxLength={256}
                   name="name"
-                  data-name="Name"
                   placeholder="Your Name"
                   type="text"
                   id="name"
+                  required
                 />
                 <input
-                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf9b-a30fcb40 w-input"
+                  className="text-field w-input"
                   maxLength={256}
                   name="email"
-                  data-name="Email"
                   placeholder="Your Email"
                   type="email"
                   id="email"
@@ -402,18 +408,14 @@ const ContactPage = () => {
                 <textarea
                   placeholder="Your Message..."
                   maxLength={5000}
-                  id="field"
-                  name="field"
-                  data-name="Field"
-                  className="text-field is-area w-node-a612c34c-b2f2-57d5-3790-23f702446650-a30fcb40 w-input"
+                  id="message"
+                  name="message"
+                  className="text-field is-area w-input"
+                  required
                 ></textarea>
-                <input
-                  type="submit"
-                  data-wait="Please wait..."
-                  id="w-node-dded5a54-873d-d79f-ebda-88c1618dbf9c-a30fcb40"
-                  className="button w-button"
-                  value="Submit"
-                />
+                <button type="submit" className="button w-button">
+                  Submit
+                </button>
               </div>
             </form>
             <div className="w-form-done">
