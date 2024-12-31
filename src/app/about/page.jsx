@@ -14,19 +14,18 @@ const AboutPage = () => {
         <div className="container-small">
           <div className="hero-block">
             <h1 className="hero-heading">
-              Full Stack Developer & Creative Strategist Technologist open to
-              freelance.
+              Full Stack Developer & Creative Strategist open to freelance.
             </h1>
             <div className="text-lead">
               Co-founder of SiferOne. Based in Sétif.
             </div>
             <div className="content-block">
               <div>
-                I'm a Full Stack Developer & Creative Technologist passionate
-                about blending technology and creativity. My work focuses on
-                building seamless digital experiences, crafting innovative
-                solutions, and optimizing workflows. Always exploring new
-                technologies to push boundaries and create impact.
+                I&apos;m a Full Stack Developer & Creative Technologist
+                passionate about blending technology and creativity. My work
+                focuses on building seamless digital experiences, crafting
+                innovative solutions, and optimizing workflows. Always exploring
+                new technologies to push boundaries and create impact.
                 <br />
                 <br />I specialize in scalable web development, intuitive user
                 experiences, and strategy-driven design. With a keen eye for
