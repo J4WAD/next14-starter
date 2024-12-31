@@ -2,13 +2,6 @@
 title: Ranys
 description: I developed this website for a clinic
 longdescription: |-
-  **Helllooooo**
-
-  qsdqsdqsd
-
-  1. **qs**
-  2. **sd**
-  3. > **qWWwWw**
 thumbnail: /images/thumb/ranys.png
 year: "2024"
 team: Djaouad

@@ -375,12 +375,10 @@ const ContactPage = () => {
               id="send-a-message"
               name="email-form"
               data-name="Email Form"
-              method="POST"
-              data-netlify="true"
+              method="get"
               data-wf-page-id="641340483d66b769a30fcb40"
               data-wf-element-id="dded5a54-873d-d79f-ebda-88c1618dbf95"
             >
-              <input type="hidden" name="form-name" value="email-form" />
               <div className="w-layout-grid _4x-column">
                 <input
                   className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf98-a30fcb40 w-input"

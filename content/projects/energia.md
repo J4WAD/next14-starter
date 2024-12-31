@@ -1,12 +1,6 @@
 ---
 longdescription: |-
-  **Helllooooo**
 
-  * **qsdqsdqsd**
-
-  1. **qs**
-  2. **sd**
-  3. > **qWWwWw**
 title: Energia
 description: I developed this website for a clinic
 thumbnail: /images/thumb/energia.png
