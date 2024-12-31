@@ -42,7 +42,7 @@ const ContactPage = () => {
             <h1 className="hero-heading">Contact</h1>
           </div>
           <div className="text-lead">
-            Whether you're looking to collaborate on a project, need a
+            Whether you&apos;re looking to collaborate on a project, need a
             full-stack solution, or want help with content strategy, feel free
             to reach out.
           </div>
