@@ -284,7 +284,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
+            {/* 
             <div className="block-divider"></div>
             <div className="content-title-wrap">
               <div className="content-title-dot"></div>
@@ -304,6 +304,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
+*/}
             <div className="block-divider"></div>
             <div className="content-title-wrap">
               <div className="content-title-dot"></div>
