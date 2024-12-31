@@ -4,17 +4,29 @@ const Footer = () => {
       <div className="footer-meta-list">
         <ul role="list" className="footer-meta-socials w-list-unstyled">
           <li>
-            <a href="#" className="button w-button">
-              Instagram
+            <a
+              href="https://github.com/J4WAD"
+              target="_blank"
+              className="button w-button"
+            >
+              Github
             </a>
           </li>
           <li>
-            <a href="#" className="button w-button">
+            <a
+              href="https://www.behance.net/jawadmalik11"
+              target="_blank"
+              className="button w-button"
+            >
               Behance
             </a>
           </li>
           <li>
-            <a href="#" className="button w-button">
+            <a
+              href="https://www.linkedin.com/in/dj-azz/"
+              target="_blank"
+              className="button w-button"
+            >
               LinkedIn
             </a>
           </li>
@@ -23,7 +35,7 @@ const Footer = () => {
           <div>
             <div className="footer-meta-inline">Designed and Developed by </div>
             <a
-              href="https://www.linkedin.com/dj-azz"
+              href="https://www.linkedin.com/in/dj-azz/"
               target="_blank"
               className="link"
             >
