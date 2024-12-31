@@ -2,7 +2,7 @@
 title: RUN IN SETIF
 description: I developed this website for a clinic
 thumbnail: /images/thumb/run.png
-year: "2023"
+year: "2024"
 team: Djaouad
 category: Web Dev
 content: |-

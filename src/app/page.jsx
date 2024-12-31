@@ -83,14 +83,14 @@ export default function Home() {
     {
       href: "/404",
       heading: "7 Ways To Improve Website Usability And Accessibility",
-      date: "May 4, 2023",
+      date: "May 4, 2024",
       readTime: "5",
       badge: "Featured",
     },
     {
       href: "/404",
       heading: "7 Must Have Tools For Web Designers",
-      date: "May 4, 2023",
+      date: "May 4, 2024",
       readTime: "10",
       badge: null,
     },

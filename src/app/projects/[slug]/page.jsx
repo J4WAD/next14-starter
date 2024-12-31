@@ -211,9 +211,9 @@ export default async function ProjectPage({ params }) {
                     <div className="w-dyn-list">
                       <div role="list" className="team-list">
                         <div role="listitem" className="w-dyn-item">
-                          <Link href="/team/mable-marvin" className="team-link">
+                          <Link href="/contact" className="team-link">
                             <Image
-                              src="/images/avatar-01.jpg"
+                              src="/images/pdp.png"
                               alt="Team member avatar"
                               width={40}
                               height={40}

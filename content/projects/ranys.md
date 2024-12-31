@@ -10,7 +10,7 @@ longdescription: |-
   2. **sd**
   3. > **qWWwWw**
 thumbnail: /images/thumb/ranys.png
-year: "2023"
+year: "2024"
 team: Djaouad
 category: Web Dev
 gallery_image_1: /images/ranys3.png

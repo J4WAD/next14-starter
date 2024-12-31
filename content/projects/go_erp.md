@@ -2,7 +2,7 @@
 title: Groupe Ouennouri
 description: I developed this website for a clinic
 thumbnail: /images/thumb/goerp.png
-year: "2023"
+year: "2024"
 team: Djaouad
 category: Software
 longdescription: |-

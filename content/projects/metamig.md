@@ -2,7 +2,7 @@
 title: Metamig
 description: I developed this website for a clinic
 thumbnail: /images/thumb/metamig.png
-year: "2023"
+year: "2024"
 team: Djaouad
 category: Web Dev
 longdescription: |-

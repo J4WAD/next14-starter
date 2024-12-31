@@ -170,7 +170,7 @@ const ContactPage = () => {
 
             {/* CARD 2 */}
             <a
-              href="#"
+              href="https://www.linkedin.com/in/dj-azz/"
               className="card w-inline-block"
               onMouseMove={(e) => handleMouseMove(e, "card2")}
               onMouseLeave={handleMouseLeave}
@@ -241,7 +241,7 @@ const ContactPage = () => {
 
             {/* CARD 3 */}
             <a
-              href="#"
+              href="https://www.linkedin.com/in/dj-azz/"
               className="card w-inline-block"
               onMouseMove={(e) => handleMouseMove(e, "card3")}
               onMouseLeave={handleMouseLeave}
@@ -318,7 +318,7 @@ const ContactPage = () => {
             {/* CARD 4 */}
             <a
               id="w-node-_5949b375-8fd2-7519-620c-0a4d7ee3d0d8-a30fcb40"
-              href="#"
+              href="https://www.behance.net/jawadmalik11"
               className="card w-inline-block"
               onMouseMove={(e) => handleMouseMove(e, "card4")}
               onMouseLeave={handleMouseLeave}
@@ -352,11 +352,8 @@ const ContactPage = () => {
                     className="contact-card-square"
                   >
                     <img
-                      src="images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1--1.jpg"
+                      src="images/r+.svg"
                       loading="lazy"
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, (max-width: 991px) 44vw, 30vw"
-                      srcSet="images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1-p-500-1.jpg 500w, images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1-p-800-1.jpg 800w, images/tyler-nix-6b5hhx83tbo-unsplash-201-20-1--2.jpg 853w"
-                      alt=""
                       className="thumb-image"
                     />
                     <div className="outline-10px" />

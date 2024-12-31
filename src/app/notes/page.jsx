@@ -81,14 +81,14 @@ const NotesPage = () => {
     {
       href: "/post/7-ways-to-improve-website-usability-and-accessibility",
       heading: "7 Ways To Improve Website Usability And Accessibility",
-      date: "May 4, 2023",
+      date: "May 4, 2024",
       readTime: "5",
       badge: "Featured",
     },
     {
       href: "/post/7-must-have-tools-for-web-designers",
       heading: "7 Must Have Tools For Web Designers",
-      date: "May 4, 2023",
+      date: "May 4, 2024",
       readTime: "10",
       badge: null,
     },

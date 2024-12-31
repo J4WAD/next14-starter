@@ -5,7 +5,7 @@ longdescription: |-
 title: PUBDEC
 description: I developed this website for a clinic
 thumbnail: /images/thumb/pubdec.png
-year: "2023"
+year: "2024"
 category: Web Dev
 team: Djaouad
 gallery_image_1: /images/pubdecgallery-05.png
