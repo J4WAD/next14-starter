@@ -3314,6 +3314,12 @@ blockquote {
     display: inline
 }
 
+.contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .container {
     width: 100%;
     max-width: 800px;
