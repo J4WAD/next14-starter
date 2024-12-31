@@ -113,39 +113,75 @@ export default function Home() {
 
   const tools = [
     {
-      href: "https://www.next.com",
-      icon: "/images/next-icon.png",
-      title: "next",
+      href: "https://www.NextJS.org",
+      icon: "/images/NextJS13.svg",
+      title: "NextJS",
       description:
-        "A user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
+        "A React framework for building fast, SEO-friendly web apps with server-side rendering and static site generation.",
       badge: "Favorite",
       width: 40,
       height: 40,
     },
     {
-      href: "https://www.framer.com/",
-      icon: "/images/icon-loom.webp",
-      title: "Framer",
+      href: "https://www.visualstudio.com/",
+      icon: "/images/vscode.svg",
+      title: "VSCode",
       description:
-        "next is a user-friendly and intuitive website builder that makes creating pages easy even for those who don’t write code.",
+        "A lightweight, versatile code editor with built-in debugging, extensions, and Git integration for seamless development.",
       width: 40,
       height: 40,
     },
     {
-      href: "https://www.readymag.com",
-      icon: "/images/icon-rm.png",
-      title: "Readymag",
+      href: "https://www.postgresql.com",
+      icon: "/images/postgresql.svg",
+      title: "PostgreSQL",
       description:
-        "Readymag is a web-based tool that allows you to design digital publications, websites, presentations, and more.",
+        "A robust, open-source database system known for reliability, scalability, and advanced features.",
       width: 40,
       height: 40,
     },
     {
-      href: "https://www.loom.com/",
-      icon: "/images/icon-loom.webp",
-      title: "Loom",
+      href: "https://www.docker.com/",
+      icon: "/images/docker.svg",
+      title: "Docker",
       description:
-        "Loom is a platform to capture video and screen recordings to communicate with your team or clients quickly.",
+        "A platform for building, sharing, and running applications in lightweight, portable containers.",
+      width: 40,
+      height: 40,
+    },
+    {
+      href: "https://github.com/",
+      icon: "/images/github.svg",
+      title: "GitHub",
+      description:
+        "A platform for hosting, managing, and collaborating on software projects using Git.",
+      width: 40,
+      height: 40,
+    },
+    {
+      href: "https://www.figma.com/",
+      icon: "/images/figma.svg",
+      title: "Figma",
+      description:
+        "A collaborative design tool for creating user interfaces, prototypes, and design systems.",
+      width: 40,
+      height: 40,
+    },
+    {
+      href: "https://www.adobe.com/products/illustrator.html",
+      icon: "/images/ai.svg",
+      title: "Adobe Illustrator",
+      description:
+        "A vector graphics editor for creating logos, illustrations, and complex designs.",
+      width: 40,
+      height: 40,
+    },
+    {
+      href: "https://tailwindcss.com/",
+      icon: "/images/tailwind.svg",
+      title: "Tailwind CSS",
+      description:
+        "A utility-first CSS framework for building custom designs quickly and efficiently.",
       width: 40,
       height: 40,
     },
@@ -163,7 +199,7 @@ export default function Home() {
                   worldwide.
                 </h1>
                 <div className="text-lead">
-                  Co-Founder of SipherOne. Based in ALGERIA.
+                  Co-Founder of SiferOne. Based in ALGERIA.
                 </div>
               </div>
             </div>
@@ -272,9 +308,6 @@ export default function Home() {
             <div className="content-title-wrap">
               <div className="content-title-dot"></div>
               <h2 className="content-title">Tools.</h2>
-              <div className="content-title is-text">
-                Aenean faucibus nibh et justo cursus id rutrum.
-              </div>
             </div>
             <div className="w-layout-grid _2x-column">
               {tools.map((tool, index) => (

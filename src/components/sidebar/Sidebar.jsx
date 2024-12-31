@@ -153,7 +153,7 @@ const Sidebar = () => {
               </div>
             </Link>
             <div className="navbar-list-divider"></div>
-            <Link
+            {/*<Link
               href="/notes"
               className={`navbar-link w-inline-block ${
                 isActive("/notes") ? "w--current" : ""
@@ -260,7 +260,7 @@ const Sidebar = () => {
               </div>
             </Link>
 
-            <div className="navbar-list-divider"></div>
+            <div className="navbar-list-divider"></div>*/}
             {/* About Tab */}
             <Link
               href="/about"

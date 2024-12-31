@@ -14,26 +14,24 @@ const AboutPage = () => {
         <div className="container-small">
           <div className="hero-block">
             <h1 className="hero-heading">
-              Art Director &amp; UX Designer open to freelance.
+              Full Stack Developer & Creative Strategist Technologist open to
+              freelance.
             </h1>
             <div className="text-lead">
-              Co-founder of Fouroom. Based in ☂ London.
+              Co-founder of SiferOne. Based in Sétif.
             </div>
             <div className="content-block">
               <div>
-                Im an Art Director &amp; Designer however venture pursuit he am
-                mr cordial. Forming musical am hearing studied be luckily.
-                Ourselves for determine attending how led gentleman sincerity.
-                Valley afford uneasy joy she thrown though bed set. In me
-                forming general prudent on country carried. Behaved an or
-                suppose justice. Seemed whence how son rather easily and change
-                missed.
+                I'm a Full Stack Developer & Creative Technologist passionate
+                about blending technology and creativity. My work focuses on
+                building seamless digital experiences, crafting innovative
+                solutions, and optimizing workflows. Always exploring new
+                technologies to push boundaries and create impact.
                 <br />
-                <br />
-                Off apartments invitation are unpleasant solicitude fat
-                motionless interested. Hardly suffer wisdom wishes valley as an.
-                As friendship advantages resolution it alteration stimulated he
-                or increasing.
+                <br />I specialize in scalable web development, intuitive user
+                experiences, and strategy-driven design. With a keen eye for
+                detail and a focus on functionality, I help bring ideas to life
+                with precision and creativity.
               </div>
             </div>
           </div>
@@ -47,19 +45,19 @@ const AboutPage = () => {
           <div className="accordion-list">
             {[
               {
-                question: "Do you offer web development service?",
+                question: "Do you offer web development services?",
                 answer:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+                  "Yes, I specialize in full-stack web development, delivering custom websites and applications tailored to your needs, using modern frameworks and scalable technologies.",
               },
               {
-                question: "Do you do branding or art direction?",
+                question: "Can you help with branding or content management?",
                 answer:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+                  "Absolutely. Alongside development, I offer content strategy and management services to ensure your brand's message is clear and impactful across all platforms.",
               },
               {
-                question: "How can I contact you?",
+                question: "How can I get in touch with you?",
                 answer:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+                  "You can reach me through my contact form on the website or via email (djaouad@siferone.com). I'm also available on LinkedIn for professional inquiries.",
               },
             ].map((faq, index) => {
               const isActive = activeIndex === index;
