@@ -42,8 +42,9 @@ const ContactPage = () => {
             <h1 className="hero-heading">Contact</h1>
           </div>
           <div className="text-lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit interdum
-            nulla.
+            Whether you're looking to collaborate on a project, need a
+            full-stack solution, or want help with content strategy, feel free
+            to reach out.
           </div>
         </div>
 
@@ -90,7 +91,12 @@ const ContactPage = () => {
                         <div>75, Rue El Amel- Gasria, Sétif, DZ</div>
                       </div>
                       <div id="w-node-_2c986120-4a92-938d-1d24-6b52be79ada7-a30fcb40">
-                        <a href="#" className="button-small is-map w-button">
+                        <a
+                          href="https://maps.app.goo.gl/tcsP8Asa41J2LqFm9"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="button-small is-map w-button"
+                        >
                           Go
                         </a>
                       </div>
@@ -102,25 +108,58 @@ const ContactPage = () => {
                         id="w-node-_514b6dfd-cb5e-8d8e-9d05-c59369cbd762-a30fcb40"
                         className="map-links"
                       >
-                        <a href="tel:+49123456789" className="text-link">
-                          +49123456789
+                        <a href="tel:+213541190274" className="text-link">
+                          +213541190274
                         </a>
                         <a
-                          href="mailto:hello@template.com"
+                          href="mailto:contact@siferone.com"
                           className="text-link"
                         >
-                          hello@template.com
+                          contact@siferone.com
                         </a>
                       </div>
                       <div
                         id="w-node-_514b6dfd-cb5e-8d8e-9d05-c59369cbd767-a30fcb40"
                         className="map-buttons"
                       >
-                        <a href="#" className="button-small is-circle w-button">
-                          ☎️
+                        <a
+                          href="tel:+213541190274"
+                          className="button-small is-circle w-button"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-phone"
+                          >
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.45 19.48 19.48 0 0 1-6-6A19.86 19.86 0 0 1 2 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.56 2 2 0 0 1-.45 2l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2-.45 12.05 12.05 0 0 0 2.56.57A2 2 0 0 1 22 16.92z"></path>
+                          </svg>
                         </a>
-                        <a href="#" className="button-small is-circle w-button">
-                          📫
+                        <a
+                          href="mailto:contact@siferone.com"
+                          className="button-small is-circle w-button"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-mail"
+                          >
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                          </svg>
                         </a>
                       </div>
                     </div>

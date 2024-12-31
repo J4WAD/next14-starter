@@ -21,13 +21,13 @@ const Footer = () => {
         </ul>
         <div className="footer-meta-info">
           <div>
-            <div className="footer-meta-inline">A product of </div>
+            <div className="footer-meta-inline">Designed and Developed by </div>
             <a
-              href="https://www.instagram.com/j4wad"
+              href="https://www.linkedin.com/dj-azz"
               target="_blank"
               className="link"
             >
-              J4LABS
+              Djaouad Azzouz
             </a>
           </div>
         </div>

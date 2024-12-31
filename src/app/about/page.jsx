@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Footer from "@/components/footer/Footer";
 
 const AboutPage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -99,7 +100,7 @@ const AboutPage = () => {
             })}
           </div>
         </div>
-        <div className="block-divider"></div>
+        {/*<div className="block-divider"></div>
         <div className="section-block">
           <div className="content-title-wrap">
             <div className="content-title-dot"></div>
@@ -115,8 +116,9 @@ const AboutPage = () => {
               ranging from €120 to €200.
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
+      <Footer />
     </main>
   );
 };

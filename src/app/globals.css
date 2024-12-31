@@ -2996,7 +2996,7 @@ blockquote {
 
 .button-small.is-map {
     border-color: var(--border);
-    background-color: var(--green);
+    background-color: var(--red);
     color: #fff
 }
 
