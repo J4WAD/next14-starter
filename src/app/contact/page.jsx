@@ -2,12 +2,17 @@
 import Footer from "@/components/footer/Footer";
 import { useState } from "react";
 import Image from "next/image";
+import emailjs from "emailjs-com";
 const ContactPage = () => {
-  // 1. Store the styles for the shine and the currently active card
   const [shineStyle, setShineStyle] = useState({});
   const [activeCard, setActiveCard] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
 
-  // 2. Handlers to update shine position and show/hide the shine
   const handleMouseMove = (e, cardId) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -19,6 +24,31 @@ const ContactPage = () => {
 
   const handleMouseLeave = () => {
     setActiveCard(null);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_zfx54pt",
+        "template_j062opn",
+        formData,
+        "jSMSZ4pBPg0hFebX0"
+      )
+      .then(
+        (result) => {
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          setStatus("Failed to send message. Please try again.");
+        }
+      );
   };
 
   return (
@@ -365,123 +395,105 @@ const ContactPage = () => {
         </div>
 
         <div className="block-divider"></div>
+
+        {/* Contact Form Section */}
         <div className="section-block">
-          <div className="content-title-wrap">
-            <div className="content-title-dot"></div>
-            <h2 className="content-title">Send a message to us</h2>
-          </div>
-          <div className="form-block w-form">
-            <form
-              id="send-a-message"
-              name="email-form"
-              data-name="Email Form"
-              method="get"
-              data-wf-page-id="641340483d66b769a30fcb40"
-              data-wf-element-id="dded5a54-873d-d79f-ebda-88c1618dbf95"
+          <h2>Send a message to us</h2>
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="p-2 border rounded"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="p-2 border rounded"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="p-2 border rounded"
+              rows="5"
+            ></textarea>
+            <button
+              type="submit"
+              className="p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
             >
-              <div className="w-layout-grid _4x-column">
-                <input
-                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf98-a30fcb40 w-input"
-                  maxLength={256}
-                  name="name"
-                  data-name="Name"
-                  placeholder="Your Name"
-                  type="text"
-                  id="name"
-                />
-                <input
-                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf9b-a30fcb40 w-input"
-                  maxLength={256}
-                  name="email"
-                  data-name="Email"
-                  placeholder="Your Email"
-                  type="email"
-                  id="email"
-                  required
-                />
-                <textarea
-                  placeholder="Your Message..."
-                  maxLength={5000}
-                  id="field"
-                  name="field"
-                  data-name="Field"
-                  className="text-field is-area w-node-a612c34c-b2f2-57d5-3790-23f702446650-a30fcb40 w-input"
-                ></textarea>
-                <input
-                  type="submit"
-                  data-wait="Please wait..."
-                  id="w-node-dded5a54-873d-d79f-ebda-88c1618dbf9c-a30fcb40"
-                  className="button w-button"
-                  value="Submit"
-                />
-              </div>
-            </form>
-            <div className="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div className="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
-          </div>
+              Send
+            </button>
+          </form>
+          {status && <p>{status}</p>}
         </div>
+      </div>
 
-        <div className="block-divider"></div>
+      <div className="block-divider"></div>
 
-        <div className="section-block">
-          <div className="container-small">
-            <div className="newsletter-wrap">
-              <div className="newsletter-image-wrap">
-                <div className="newsletter-image">
-                  <div className="newsletter-image-icon-size">
-                    <div className="icon-svg w-embed">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path fillRule="evenodd" d="M..." clipRule="evenodd" />
-                        {/* Add any additional paths if needed */}
-                      </svg>
-                    </div>
+      <div className="section-block">
+        <div className="container-small">
+          <div className="newsletter-wrap">
+            <div className="newsletter-image-wrap">
+              <div className="newsletter-image">
+                <div className="newsletter-image-icon-size">
+                  <div className="icon-svg w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path fillRule="evenodd" d="M..." clipRule="evenodd" />
+                      {/* Add any additional paths if needed */}
+                    </svg>
                   </div>
                 </div>
-                <div className="newsletter-image-outline"></div>
               </div>
-              <div className="newsletter-content">
-                <div className="newsletter-content-top">
-                  <h2 className="card-heading">
-                    Get notified when we release new products.
-                  </h2>
-                  <div>
-                    We never share your data, and we send approximately 1-2
-                    emails per month.
-                  </div>
+              <div className="newsletter-image-outline"></div>
+            </div>
+            <div className="newsletter-content">
+              <div className="newsletter-content-top">
+                <h2 className="card-heading">
+                  Get notified when we release new products.
+                </h2>
+                <div>
+                  We never share your data, and we send approximately 1-2 emails
+                  per month.
                 </div>
-                <div className="form-block w-form">
-                  <form id="email-form" name="email-form" method="get">
-                    <div className="w-layout-grid newsletter-grid">
-                      <input
-                        className="text-field w-input"
-                        maxLength="256"
-                        name="Email"
-                        placeholder="Your Email"
-                        type="email"
-                        required
-                      />
-                      <input
-                        type="submit"
-                        className="button is-submit w-button"
-                        value="Subscribe now"
-                      />
-                    </div>
-                  </form>
-                  <div className="w-form-done">
-                    <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div className="form-block w-form">
+                <form id="email-form" name="email-form" method="get">
+                  <div className="w-layout-grid newsletter-grid">
+                    <input
+                      className="text-field w-input"
+                      maxLength="256"
+                      name="Email"
+                      placeholder="Your Email"
+                      type="email"
+                      required
+                    />
+                    <input
+                      type="submit"
+                      className="button is-submit w-button"
+                      value="Subscribe now"
+                    />
                   </div>
-                  <div className="w-form-fail">
-                    <div>
-                      Oops! Something went wrong while submitting the form.
-                    </div>
+                </form>
+                <div className="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div className="w-form-fail">
+                  <div>
+                    Oops! Something went wrong while submitting the form.
                   </div>
                 </div>
               </div>
