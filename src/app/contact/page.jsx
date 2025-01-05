@@ -401,42 +401,45 @@ const ContactPage = () => {
 
         {/* Contact Form Section */}
         <div className="section-block">
-          <h2>Send a message to us</h2>
-          <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="p-2 border rounded"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="p-2 border rounded"
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="p-2 border rounded"
-              rows="5"
-            ></textarea>
-            <button
-              type="submit"
-              className="p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-            >
-              Send
-            </button>
-          </form>
+          <div className="content-title-wrap">
+            <div className="content-title-dot"></div>
+            <h2 className="content-title">Send a message</h2>
+          </div>
+          <div className="form-block w-form">
+            <form onSubmit={handleSubmit} className="w-layout-grid _2x-column">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf98-a30fcb40 w-input"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf9b-a30fcb40 w-input"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="text-field is-area w-node-a612c34c-b2f2-57d5-3790-23f702446650-a30fcb40 w-input"
+                rows="5"
+              ></textarea>
+              <button type="submit" className="button w-button">
+                Send
+              </button>
+            </form>
+          </div>
+
           {status && <p>{status}</p>}
         </div>
       </div>
