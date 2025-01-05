@@ -36,7 +36,7 @@ const ContactPage = () => {
     emailjs
       .send(
         "service_zfx54pt",
-        "template_j062opn",
+        "template_ibcdrqw",
         formData,
         "jSMSZ4pBPg0hFebX0"
       )
