@@ -20,39 +20,6 @@ const ContactPage = () => {
   const handleMouseLeave = () => {
     setActiveCard(null);
   };
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState(null);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormState({ ...formState, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new URLSearchParams(formState).toString();
-
-    try {
-      const response = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData,
-      });
-
-      if (response.ok) {
-        setStatus("success");
-        setFormState({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
-      setStatus("error");
-    }
-  };
 
   return (
     <main className="main">
@@ -403,58 +370,59 @@ const ContactPage = () => {
             <div className="content-title-dot"></div>
             <h2 className="content-title">Send a message to us</h2>
           </div>
-          <form onSubmit={handleSubmit} className="form-block w-form">
-            <div className="w-layout-grid _4x-column">
-              <input
-                className="text-field w-input"
-                maxLength={256}
-                name="name"
-                data-name="Name"
-                placeholder="Your Name"
-                type="text"
-                id="name"
-                value={formState.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                className="text-field w-input"
-                maxLength={256}
-                name="email"
-                data-name="Email"
-                placeholder="Your Email"
-                type="email"
-                id="email"
-                value={formState.email}
-                onChange={handleChange}
-                required
-              />
-              <textarea
-                placeholder="Your Message..."
-                maxLength={5000}
-                id="message"
-                name="message"
-                data-name="Message"
-                className="text-field is-area w-input"
-                value={formState.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-              <button type="submit" className="button w-button">
-                Submit
-              </button>
-            </div>
-          </form>
-          {status === "success" && (
+          <div className="form-block w-form">
+            <form
+              id="send-a-message"
+              name="email-form"
+              data-name="Email Form"
+              method="get"
+              data-wf-page-id="641340483d66b769a30fcb40"
+              data-wf-element-id="dded5a54-873d-d79f-ebda-88c1618dbf95"
+            >
+              <div className="w-layout-grid _4x-column">
+                <input
+                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf98-a30fcb40 w-input"
+                  maxLength={256}
+                  name="name"
+                  data-name="Name"
+                  placeholder="Your Name"
+                  type="text"
+                  id="name"
+                />
+                <input
+                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf9b-a30fcb40 w-input"
+                  maxLength={256}
+                  name="email"
+                  data-name="Email"
+                  placeholder="Your Email"
+                  type="email"
+                  id="email"
+                  required
+                />
+                <textarea
+                  placeholder="Your Message..."
+                  maxLength={5000}
+                  id="field"
+                  name="field"
+                  data-name="Field"
+                  className="text-field is-area w-node-a612c34c-b2f2-57d5-3790-23f702446650-a30fcb40 w-input"
+                ></textarea>
+                <input
+                  type="submit"
+                  data-wait="Please wait..."
+                  id="w-node-dded5a54-873d-d79f-ebda-88c1618dbf9c-a30fcb40"
+                  className="button w-button"
+                  value="Submit"
+                />
+              </div>
+            </form>
             <div className="w-form-done">
-              <p>Thank you! Your submission has been received!</p>
+              <div>Thank you! Your submission has been received!</div>
             </div>
-          )}
-          {status === "error" && (
             <div className="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form.</p>
+              <div>Oops! Something went wrong while submitting the form.</div>
             </div>
-          )}
+          </div>
         </div>
 
         <div className="block-divider"></div>
