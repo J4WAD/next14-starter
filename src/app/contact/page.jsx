@@ -402,7 +402,7 @@ const ContactPage = () => {
         <div className="section-block">
           <div className="content-title-wrap">
             <div className="content-title-dot"></div>
-            <h2 className="content-title">Send a message</h2>
+            <h2 className="content-title">Send a message to us</h2>
           </div>
           <div className="form-block w-form">
             <form
