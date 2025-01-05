@@ -29,16 +29,19 @@ const ContactPage = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs
       .send(
-        "service_zfx54pt",
-        "template_ibcdrqw",
-        formData,
-        "jSMSZ4pBPg0hFebX0"
+        "service_zfx54pt", // Replace with your service ID
+        "template_ibcdrqw", // Replace with your template ID
+        {
+          name: formData.name, // Matches {{name}} in template
+          email: formData.email, // Matches {{email}} in template
+          message: formData.message, // Matches {{message}} in template
+        },
+        "jSMSZ4pBPg0hFebX0" // Replace with your public key
       )
       .then(
         (result) => {
