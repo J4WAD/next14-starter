@@ -2,17 +2,12 @@
 import Footer from "@/components/footer/Footer";
 import { useState } from "react";
 import Image from "next/image";
-
 const ContactPage = () => {
+  // 1. Store the styles for the shine and the currently active card
   const [shineStyle, setShineStyle] = useState({});
   const [activeCard, setActiveCard] = useState(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState("");
 
+  // 2. Handlers to update shine position and show/hide the shine
   const handleMouseMove = (e, cardId) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -26,35 +21,6 @@ const ContactPage = () => {
     setActiveCard(null);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Submitting...");
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "contact-form",
-          ...formData,
-        }),
-      });
-
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setStatus("Something went wrong. Please try again later.");
-    }
-  };
   return (
     <main className="main">
       <div className="container">
@@ -406,49 +372,56 @@ const ContactPage = () => {
           </div>
           <div className="form-block w-form">
             <form
-              onSubmit={handleSubmit}
-              name="contact-form"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
+              id="send-a-message"
+              name="email-form"
+              data-name="Email Form"
+              method="get"
+              data-wf-page-id="641340483d66b769a30fcb40"
+              data-wf-element-id="dded5a54-873d-d79f-ebda-88c1618dbf95"
             >
-              {/* Hidden field for Netlify */}
-              <input type="hidden" name="form-name" value="contact-form" />
               <div className="w-layout-grid _4x-column">
                 <input
-                  className="text-field w-input"
+                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf98-a30fcb40 w-input"
                   maxLength={256}
                   name="name"
+                  data-name="Name"
                   placeholder="Your Name"
                   type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
+                  id="name"
                 />
                 <input
-                  className="text-field w-input"
+                  className="text-field w-node-dded5a54-873d-d79f-ebda-88c1618dbf9b-a30fcb40 w-input"
                   maxLength={256}
                   name="email"
+                  data-name="Email"
                   placeholder="Your Email"
                   type="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  id="email"
                   required
                 />
                 <textarea
-                  className="text-field w-input"
-                  maxLength={5000}
-                  name="message"
                   placeholder="Your Message..."
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
+                  maxLength={5000}
+                  id="field"
+                  name="field"
+                  data-name="Field"
+                  className="text-field is-area w-node-a612c34c-b2f2-57d5-3790-23f702446650-a30fcb40 w-input"
                 ></textarea>
-                <button type="submit" className="button w-button">
-                  Submit
-                </button>
+                <input
+                  type="submit"
+                  data-wait="Please wait..."
+                  id="w-node-dded5a54-873d-d79f-ebda-88c1618dbf9c-a30fcb40"
+                  className="button w-button"
+                  value="Submit"
+                />
               </div>
             </form>
-            {status && <p>{status}</p>}
+            <div className="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div className="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
           </div>
         </div>
 
