@@ -419,7 +419,7 @@ const ContactPage = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="email@email.com"
                 value={formData.email}
                 onChange={handleChange}
                 required
