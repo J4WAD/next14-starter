@@ -6,13 +6,8 @@ import emailjs from "emailjs-com";
 const ContactPage = () => {
   const [shineStyle, setShineStyle] = useState({});
   const [activeCard, setActiveCard] = useState(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [status, setStatus] = useState("");
-
+  const [substatus, setsubStatus] = useState("");
   const handleMouseMove = (e, cardId) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -25,6 +20,11 @@ const ContactPage = () => {
   const handleMouseLeave = () => {
     setActiveCard(null);
   };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -53,7 +53,35 @@ const ContactPage = () => {
         }
       );
   };
+  const [subData, setsubData] = useState({
+    sub: "",
+  });
 
+  const handlesubChange = (e) => {
+    setsubData({ ...subData, [e.target.name]: e.target.value });
+  };
+  const handlesubSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_zfx54pt", // Replace with your service ID
+        "template_flu4ybn", // Replace with your template ID
+        {
+          sub: subData.sub,
+        },
+        "jSMSZ4pBPg0hFebX0" // Replace with your public key
+      )
+      .then(
+        (result) => {
+          setsubStatus("Subscribed!");
+          setsubData({ sub: "" });
+        },
+        (error) => {
+          setsubStatus("Failed to subscribe. Please try again.");
+        }
+      );
+  };
   return (
     <main className="main">
       <div className="container">
@@ -477,32 +505,33 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="form-block w-form">
-                <form id="email-form" name="email-form" method="get">
+                <form
+                  onSubmit={handlesubSubmit}
+                  id="email-form"
+                  name="email-form"
+                  method="get"
+                >
                   <div className="w-layout-grid newsletter-grid">
                     <input
-                      className="text-field w-input"
-                      maxLength="256"
-                      name="Email"
-                      placeholder="Your Email"
                       type="email"
+                      name="sub"
+                      placeholder="name@email.com"
+                      value={subData.sub}
+                      onChange={handlesubChange}
                       required
+                      className="text-field  w-input"
                     />
-                    <input
+                    <button
                       type="submit"
                       className="button is-submit w-button"
                       value="Subscribe now"
-                    />
+                    >
+                      Subscribe
+                    </button>
                   </div>
                 </form>
-                <div className="w-form-done">
-                  <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div className="w-form-fail">
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
               </div>
+              {substatus && <p>{substatus}</p>}
             </div>
           </div>
         </div>
