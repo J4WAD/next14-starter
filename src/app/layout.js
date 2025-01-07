@@ -10,6 +10,20 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  manifest: "/manifest.json",
+  themeColor: "#000000",
+  viewport:
+    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Djaouad Azzouz",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  applicationName: "Your Portfolio",
+  mobileWebApp: true,
 };
 
 export default function RootLayout({ children }) {
