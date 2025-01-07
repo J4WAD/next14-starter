@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-arp="">
       <head>
+        <link rel="apple-touch-icon" href="/icons/192.png" />
         <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           strategy="beforeInteractive"

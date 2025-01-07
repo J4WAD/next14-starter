@@ -1,23 +1,15 @@
 /** @type {import('next').NextConfig} */
-const withPWA = require("next-pwa");
-
 const nextConfig = {
-  reactStrictMode: true,
+  // Your existing config options...
 
-  // PWA configuration
-  pwa: {
-    dest: "public",
-    register: true,
-    skipWaiting: true,
-  },
-
-  // Webpack configuration
+  // Add this to ensure admin files are copied to the build output
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;
   },
-
-  // Rewrites configuration
+};
+// next.config.js
+module.exports = {
   async rewrites() {
     return [
       {
@@ -28,4 +20,13 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(nextConfig);
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+});
+
+module.exports = withPWA({
+  // your existing Next.js config
+});

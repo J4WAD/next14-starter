@@ -114,7 +114,7 @@ export default function Home() {
   const tools = [
     {
       href: "https://www.NextJS.org",
-      icon: "/images/NextJS13.svg",
+      icon: "/images/nextjs13.svg",
       title: "NextJS",
       description:
         "A React framework for building fast, SEO-friendly web apps with server-side rendering and static site generation.",
