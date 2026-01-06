@@ -12,6 +12,8 @@ const nextConfig = {
     config.resolve.fallback = { fs: false };
     return config;
   },
+  // Add empty turbopack config to allow webpack config to work
+  turbopack: {},
   async rewrites() {
     return [
       {
