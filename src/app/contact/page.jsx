@@ -415,6 +415,7 @@ const ContactPage = () => {
                     <img
                       src="images/r+.svg"
                       loading="lazy"
+                      alt=""
                       className="thumb-image"
                     />
                     <div className="outline-10px" />

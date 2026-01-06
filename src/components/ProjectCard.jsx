@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ProjectCard({ project }) {
   const [style, setStyle] = useState({});
@@ -52,11 +53,13 @@ export default function ProjectCard({ project }) {
 
         {/* Thumbnail / Image */}
         <div className="project-thumb-portrait relative aspect-[4/3] overflow-hidden">
-          <img
+          <Image
             loading="lazy"
-            alt={project.title}
+            alt={project.title || "Project thumbnail"}
             src={project.thumbnail}
-            className="thumb-image object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="thumb-image object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
 

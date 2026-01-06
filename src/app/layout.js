@@ -4,6 +4,7 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
+
 export const metadata = {
   title: "Djaouad Azzouz",
   description: "Portfolio",
@@ -11,9 +12,6 @@ export const metadata = {
     icon: "/favicon.ico",
   },
   manifest: "/manifest.json",
-  themeColor: "#000000",
-  viewport:
-    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -24,6 +22,15 @@ export const metadata = {
   },
   applicationName: "Your Portfolio",
   mobileWebApp: true,
+};
+
+export const viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  shrinkToFit: false,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }) {

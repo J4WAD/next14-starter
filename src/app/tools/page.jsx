@@ -1,6 +1,7 @@
 "use client";
 import Footer from "@/components/footer/Footer";
 import { useState } from "react";
+import Image from "next/image";
 
 const ToolCard = ({
   href,
@@ -32,7 +33,7 @@ const ToolCard = ({
         <div className="tools">
           <div className="tools-head">
             <div className="tools-icon">
-              <img src={iconSrc} alt={heading} className="image-background" />
+              <Image src={iconSrc} alt={heading} width={40} height={40} className="image-background" />
               <div className="app-outline"></div>
             </div>
             <div>

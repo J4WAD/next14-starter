@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Footer from "@/components/footer/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 const Card = ({
   href,
@@ -266,13 +267,14 @@ export default function Home() {
                               }`}
                             >
                               <div className="card-thumb">
-                                <img
+                                <Image
                                   src={image}
-                                  alt=""
+                                  alt={`${project.heading} gallery image ${imgIndex + 1}`}
                                   loading="lazy"
                                   width={500}
                                   height={300}
                                   className="thumb-image"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                               </div>
                             </div>
@@ -329,10 +331,12 @@ export default function Home() {
                   <div className="card-content-vertical">
                     <div className="tools-head-long">
                       <div className="app-wrap">
-                        <img
+                        <Image
                           src={tool.icon}
                           loading="lazy"
-                          alt=""
+                          alt={`${tool.title} icon`}
+                          width={tool.width || 40}
+                          height={tool.height || 40}
                           className="sidebar-header-avatar"
                         />
                         <div className="app-outline"></div>
